@@ -36,6 +36,10 @@ export default async function CoursePage({ params }: { params: { slug: string } 
   // Determine background image based on slug category (now unused, but kept for signature)
   let bgImage = "/media/bg/exam_bg.jpg";
 
+  // WhatsApp application link with the course name pre-filled
+  const waMessage = `Merhaba, ${cleanTitle} eğitimi hakkında bilgi almak ve başvuru yapmak istiyorum.`;
+  const waLink = `https://wa.me/905336569983?text=${encodeURIComponent(waMessage)}`;
+
   return (
     <main className="min-h-screen bg-[#FDFBF7] pb-24">
       <AnimatedPageHero title={cleanTitle} bgImage={bgImage} />
@@ -66,7 +70,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 {cleanTitle} eğitimimiz hakkında detaylı bilgi almak ve ücretsiz seviye tespit sınavımıza katılmak için bizimle iletişime geçin.
               </p>
               
-              <LiquidMetalButton label="Hemen Başvur" />
+              <LiquidMetalButton label="Hemen Başvur" href={waLink} target="_blank" />
               
               <div className="mt-8 pt-8 border-t border-gray-100 w-full">
                 <p className="text-sm text-gray-500 mb-2">Sorularınız mı var?</p>
