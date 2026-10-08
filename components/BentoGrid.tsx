@@ -62,8 +62,8 @@ const statCards = [
 
 const Team = () => {
   return (
-    <section className="bg-[#fcfcfc] w-full py-20 border-t border-gray-100">
-      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-12 flex flex-col items-center justify-center gap-12">
+    <section className="bg-[#fcfcfc] w-full py-14 md:py-20 border-t border-gray-100">
+      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-12 flex flex-col items-center justify-center gap-8 md:gap-12">
         <motion.div
           initial={{ y: -40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -71,19 +71,19 @@ const Team = () => {
           transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-xl mx-auto flex flex-col items-center justify-center text-center gap-4"
         >
-          <span className="mb-6 flex items-center justify-center gap-4 text-[10px] font-sans font-semibold tracking-[0.3em] text-navy uppercase">
+          <span className="mb-2 md:mb-6 flex items-center justify-center gap-4 text-[10px] font-sans font-semibold tracking-[0.3em] text-navy uppercase">
             <span className="w-8 h-[1px] bg-navy/40"></span>
             Başarılarla Dolu Bir Tarih
             <span className="w-8 h-[1px] bg-navy/40"></span>
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif text-navy">
+          <h2 className="text-[28px] leading-tight md:text-5xl font-serif text-navy">
             40 yıllık birikim, kusursuz vizyon ve
             <span className="text-red-600 italic font-light"> kanıtlanmış </span>
             başarılar.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 w-full">
           {statCards.map((card, index) => (
             <motion.div
               key={index}
@@ -96,17 +96,17 @@ const Team = () => {
               {/* Top accent */}
               <div className="h-[2px] w-full bg-red-600/10 group-hover:bg-red-600 transition-colors duration-500" />
 
-              <div className="p-8 flex flex-col gap-4">
+              <div className="p-4 md:p-8 flex flex-col gap-3 md:gap-4">
                 {/* Big stat number */}
                 <div>
-                  <span className="block text-5xl lg:text-6xl font-serif text-navy leading-none">
+                  <span className="block text-4xl md:text-5xl lg:text-6xl font-serif text-navy leading-none">
                     {index === 0 || index === 2 ? "%" : ""}{card.value}{index === 1 || index === 3 ? "+" : ""}
                   </span>
                 </div>
 
                 <div>
-                  <p className="text-base font-bold text-navy">{card.label}</p>
-                  <p className="text-sm text-navy/50 mt-1">{card.sub}</p>
+                  <p className="text-[13px] leading-snug md:text-base font-bold text-navy">{card.label}</p>
+                  <p className="text-[11px] leading-snug md:text-sm text-navy/50 mt-1">{card.sub}</p>
                 </div>
               </div>
 

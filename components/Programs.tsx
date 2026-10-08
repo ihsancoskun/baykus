@@ -44,7 +44,7 @@ const SLIDES = [
 
 export default function Programs() {
   return (
-    <section className="w-full bg-[#fcfcfc] py-20 border-t border-gray-100 overflow-hidden relative">
+    <section className="w-full bg-[#fcfcfc] py-14 md:py-20 border-t border-gray-100 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
       </div>
       
@@ -55,16 +55,16 @@ export default function Programs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-16 max-w-4xl mx-auto"
+          className="text-center mb-6 md:mb-16 max-w-4xl mx-auto"
         >
-          <div className="flex justify-center mb-6">
-            <img src="/media/2025/05/baykus-yatay-01.png" alt="Baykuş" className="h-12 w-auto object-contain opacity-80" />
+          <div className="flex justify-center mb-4 md:mb-6">
+            <img src="/media/2025/05/baykus-yatay-01.png" alt="Baykuş" className="h-10 md:h-12 w-auto object-contain opacity-80" />
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-navy tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-navy tracking-tight leading-tight mb-3 md:mb-4">
             Eğitimde <br/>
             <span className="text-red-600 italic font-light">Eşsiz Mükemmeliyet.</span>
           </h2>
-          <p className="text-navy-100 max-w-2xl mx-auto text-lg leading-relaxed font-sans font-light">
+          <p className="text-navy-100 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed font-sans font-light">
             Zorlu sınav hazırlıklarından prestijli üniversitelere başvuru süreçlerine dek, akademik hedeflerinizi gerçeğe dönüştürmek için yanınızdayız.
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ export default function Programs() {
             showCaption={true} 
             showPagination={true}
             showNavigation={true}
-            cardWidth="clamp(240px, 30vw, 400px)" // Make cards a bit larger so they look grand
+            cardWidth="clamp(200px, 30vw, 400px)" // Make cards a bit larger so they look grand
             className="pb-10"
             cardClassName="border-[8px] border-white/50 bg-white" // Give cards a thick premium white border like polaroids
           />

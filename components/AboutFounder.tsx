@@ -8,14 +8,14 @@ export default function AboutFounder() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="w-full bg-white py-24 relative overflow-hidden">
+    <section className="w-full bg-white py-14 md:py-24 relative overflow-hidden">
       {/* Background */}
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Image */}
-          <div className="relative group mx-auto lg:mx-0 w-full max-w-md">
+          <div className="relative group mx-auto lg:mx-0 w-[78%] sm:w-full max-w-md">
             {/* Red accent behind image */}
             <div className="absolute -inset-4 bg-red-600/10 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
             
@@ -32,32 +32,32 @@ export default function AboutFounder() {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 bg-navy/20 flex items-center justify-center transition-all duration-500 group-hover/video:bg-navy/40 backdrop-blur-[2px] group-hover/video:backdrop-blur-[4px]">
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-500 group-hover/video:scale-110 border border-white/30 text-white hover:bg-red-600 hover:border-red-600">
-                  <Play className="w-8 h-8 ml-2 fill-current" />
+                <div className="w-14 h-14 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-500 group-hover/video:scale-110 border border-white/30 text-white hover:bg-red-600 hover:border-red-600">
+                  <Play className="w-6 h-6 md:w-8 md:h-8 ml-1 md:ml-2 fill-current" />
                 </div>
               </div>
             </div>
             
             {/* Experience Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-navy text-white p-6 rounded-none border border-navy/20 shadow-xl flex flex-col items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
-              <span className="text-4xl font-serif font-bold text-white">40+</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] mt-2 opacity-80">Yıllık Tecrübe</span>
+            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-navy text-white p-4 md:p-6 rounded-none border border-navy/20 shadow-xl flex flex-col items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
+              <span className="text-3xl md:text-4xl font-serif font-bold text-white">40+</span>
+              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] mt-1 md:mt-2 opacity-80">Yıllık Tecrübe</span>
             </div>
           </div>
 
           {/* Right Column: Content */}
           <div>
-            <h2 className="text-sm font-bold text-red-600 uppercase tracking-[0.2em] mb-4">
+            <h2 className="text-xs md:text-sm font-bold text-red-600 uppercase tracking-[0.2em] mb-3 md:mb-4">
               KURUCUMUZ
             </h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-semibold text-navy mb-2">
+            <h3 className="text-3xl md:text-5xl font-serif font-semibold text-navy mb-1 md:mb-2">
               Elif Akan
             </h3>
-            <p className="text-lg font-medium text-navy/60 uppercase tracking-widest mb-8">
+            <p className="text-sm md:text-lg font-medium text-navy/60 uppercase tracking-widest mb-5 md:mb-8">
               Eğitim Direktörü
             </p>
             
-            <div className="space-y-6 text-navy-100 text-lg leading-relaxed">
+            <div className="space-y-4 md:space-y-6 text-navy-100 text-[15px] md:text-lg leading-relaxed">
               <p>
                 Eğitime adanmış 40 yıllık benzersiz bir serüven... Baykuş Akademi'nin kurucusu Elif Akan, 
                 derin pedagojik bilgi birikimi ve ilham veren vizyonuyla bugüne dek binlerce öğrencinin hayatına dokunmuş; 
@@ -70,8 +70,8 @@ export default function AboutFounder() {
             </div>
 
             {/* Signature or Quote Accent */}
-            <div className="mt-10 pt-8 border-t border-gray-100">
-              <p className="font-serif text-2xl italic text-navy/80 font-light">
+            <div className="mt-6 md:mt-10 pt-6 md:pt-8 border-t border-gray-100">
+              <p className="font-serif text-xl md:text-2xl italic text-navy/80 font-light">
                 "Kalıcı başarı, ancak vizyoner bir rehberlikle gerçeğe dönüşür."
               </p>
             </div>

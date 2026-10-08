@@ -241,11 +241,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#263147] relative h-fit rounded-t-[3rem] overflow-hidden mt-12 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
-      <div className="max-w-[90rem] mx-auto px-6 py-16 md:p-20 z-40 relative">
+    <footer className="bg-[#263147] relative h-fit rounded-t-[2rem] md:rounded-t-[3rem] overflow-hidden mt-12 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
+      <div className="max-w-[90rem] mx-auto px-6 py-12 md:p-20 z-40 relative">
         
         {/* Main Grid: 1 col for Brand/Contact, 4 cols for Links */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pb-8 md:pb-12">
           
           {/* Brand & Contact Section (Takes up 4 cols) */}
           <div className="lg:col-span-4 flex flex-col space-y-6">
@@ -290,10 +290,10 @@ export default function Footer() {
           </div>
 
           {/* Footer link sections (Takes up remaining 8 cols in a 4-col grid) */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 md:gap-8">
             {footerLinks.map((section) => (
               <div key={section.title}>
-                <h4 className="text-white text-lg font-serif tracking-wide mb-6 uppercase text-sm border-b border-[#b3855a]/30 pb-2 inline-block">
+                <h4 className="text-white text-lg font-serif tracking-wide mb-4 md:mb-6 uppercase text-sm border-b border-[#b3855a]/30 pb-2 inline-block">
                   {section.title}
                 </h4>
                 <ul className="space-y-3 text-white/70 flex flex-col">
@@ -317,10 +317,10 @@ export default function Footer() {
         <hr className="border-t border-white/10 my-8" />
 
         {/* Footer bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0 text-white/50 pb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0 text-white/50 pb-6 md:pb-16">
           
           {/* Social icons */}
-          <div className="flex space-x-6 z-50">
+          <div className="flex space-x-3 md:space-x-6 z-50">
             {socialLinks.map(({ icon, label, href }) => (
               <a
                 key={label}

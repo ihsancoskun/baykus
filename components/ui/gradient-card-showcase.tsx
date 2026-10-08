@@ -39,11 +39,11 @@ export default function SkewCards() {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-wrap py-4 w-full gap-4 xl:gap-8">
+      <div className="flex flex-nowrap sm:flex-wrap sm:justify-center items-stretch overflow-x-auto sm:overflow-visible snap-x snap-mandatory py-4 w-auto sm:w-full gap-4 xl:gap-8 -mx-4 px-6 sm:mx-0 sm:px-0 [scrollbar-width:none]">
         {cards.map(({ title, desc, gradientFrom, gradientTo, imgSrc }, idx) => (
           <div
             key={idx}
-            className="group relative w-full sm:w-[380px] h-[520px] m-[10px] xl:m-0 transition-all duration-500"
+            className="group relative shrink-0 w-[78vw] sm:w-[380px] h-[440px] sm:h-[520px] snap-center sm:m-[10px] xl:m-0 transition-all duration-500"
           >
             {/* Skewed gradient panels */}
             <span
@@ -71,7 +71,7 @@ export default function SkewCards() {
               {/* Image Container */}
               <div 
                 onClick={() => setSelectedImg(imgSrc)}
-                className="relative w-full h-[240px] -mt-2 mb-4 rounded-xl overflow-hidden shadow-lg border border-white/10 group-hover:scale-105 transition-transform duration-500 block cursor-pointer"
+                className="relative w-full h-[190px] sm:h-[240px] -mt-2 mb-4 rounded-xl overflow-hidden shadow-lg border border-white/10 group-hover:scale-105 transition-transform duration-500 block cursor-pointer"
               >
                 <img 
                   src={imgSrc} 

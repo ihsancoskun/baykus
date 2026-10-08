@@ -18,10 +18,10 @@ export default function BaykusKids() {
             Baykuş Kids
             <span className="w-8 h-[1px] bg-red-400/40"></span>
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6 tracking-tight">
             Geleceğin Parlayan Yıldızlarına
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-sm md:text-lg text-white/70 max-w-2xl mx-auto font-light leading-relaxed">
             Erken yaşta başlayan kusursuz Fransızca eğitimiyle; çocuklarınıza yalnızca yepyeni bir dil değil, uluslararası ve seçkin bir vizyon armağan ediyoruz.
           </p>
         </div>
