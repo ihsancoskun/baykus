@@ -70,8 +70,8 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               
               <div className="mt-8 pt-8 border-t border-gray-100 w-full">
                 <p className="text-sm text-gray-500 mb-2">Sorularınız mı var?</p>
-                <a href="tel:+905555555555" className="text-xl font-bold text-red-600 hover:text-navy transition-colors">
-                  0212 555 55 55
+                <a href="tel:+905336569983" className="text-xl font-bold text-red-600 hover:text-navy transition-colors">
+                  0 533 656 99 83
                 </a>
               </div>
             </div>
