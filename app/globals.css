@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -36,20 +36,20 @@
 .course-content * { color: inherit; }
 
 .course-content h1 { 
-  font-family: var(--font-outfit), sans-serif; 
+  font-family: var(--font-garamond), serif; 
   font-weight: 800; font-size: 2.25rem; 
   margin-top: 2.5rem; margin-bottom: 1rem; 
   color: #111827; letter-spacing: -0.02em; 
 }
 .course-content h2 { 
-  font-family: var(--font-outfit), sans-serif; 
+  font-family: var(--font-garamond), serif; 
   font-weight: 700; font-size: 1.75rem; 
   margin-top: 2.5rem; margin-bottom: 0.75rem; 
   color: #111827; letter-spacing: -0.01em;
   border-bottom: 2px solid #f3f4f6; padding-bottom: 0.5rem;
 }
 .course-content h3 { 
-  font-family: var(--font-outfit), sans-serif; 
+  font-family: var(--font-garamond), serif; 
   font-weight: 600; font-size: 1.35rem; 
   margin-top: 2rem; margin-bottom: 0.75rem; 
   color: #1f2937;

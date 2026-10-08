@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Inter } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const garamond = EB_Garamond({ subsets: ["latin"], variable: '--font-garamond' });
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const garamond = EB_Garamond({ subsets: ["latin", "latin-ext"], variable: '--font-garamond' });
 
 export const metadata: Metadata = {
   title: "Baykuş Akademi | Fransız Zarafeti ile Eğitim",
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={`${garamond.variable} ${inter.variable} font-sans`}>
+      <body className={`${garamond.variable} font-sans`}>
         <Navbar />
         {children}
         <WhatsAppButton />

@@ -9,8 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-garamond)', 'serif'],
         serif: ['var(--font-garamond)', 'serif'],
+        mono: ['var(--font-garamond)', 'serif'],
       },
       colors: {
         'navy': {
