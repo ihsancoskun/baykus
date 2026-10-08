@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
   const waLink = "https://wa.me/905336569983?text=Merhaba,%20Bayku%C5%9F%20Akademi%20e%C4%9Fitimleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 
   return (
-    <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] flex items-end justify-end">
+    <div className="fixed bottom-4 right-4 md:bottom-10 md:right-10 z-[100] flex items-end justify-end scale-[0.8] md:scale-100 origin-bottom-right">
       <a 
         href={waLink} 
         target="_blank" 

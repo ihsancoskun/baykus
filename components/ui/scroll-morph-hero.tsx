@@ -284,7 +284,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
             </motion.div>
 
             {/* Container */}
-            <div className="flex h-full w-full max-w-[100rem] mx-auto flex-col items-stretch md:items-center justify-start md:justify-center gap-3 md:gap-0 px-4 md:px-0 pt-[84px] pb-6 md:p-0 perspective-[1000px] relative">
+            <div className="flex h-full w-full max-w-[100rem] mx-auto flex-col items-stretch md:items-center justify-start md:justify-center gap-2 md:gap-0 px-4 md:px-0 pt-[68px] pb-4 md:p-0 perspective-[1000px] relative">
 
                 {/* Top-Left Slogan Block (eexgroup style) */}
                 <motion.div 
@@ -313,16 +313,16 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1, type: "spring", stiffness: 100 }}
-                    className="order-3 md:order-none relative md:absolute z-30 shrink-0 md:bottom-24 md:right-12 xl:right-[100px] 2xl:right-[120px] w-full md:w-auto pr-[72px] md:pr-0 md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto flex flex-row md:flex-col items-center md:items-end justify-between gap-2 md:gap-0 text-left md:text-right"
+                    className="order-3 md:order-none relative md:absolute z-30 shrink-0 md:bottom-24 md:right-12 xl:right-[100px] 2xl:right-[120px] w-full md:w-auto md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto flex flex-col items-end text-right"
                 >
-                    <h2 className="text-[17px] sm:text-2xl lg:text-3xl xl:text-4xl font-serif text-navy leading-[1.15] tracking-tight text-left md:text-right">
+                    <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-serif text-navy leading-[1.15] tracking-tight text-right">
                         Geleceğe Açılan <br/> 
                         <span className="text-red-600 italic font-light">Zarif Bir Kapı.</span>
                     </h2>
-                    <p className="hidden md:block mt-4 text-sm text-navy/80 leading-relaxed font-sans font-light text-right">
+                    <p className="mt-1.5 md:mt-4 text-[12px] md:text-sm text-navy/80 leading-snug md:leading-relaxed font-sans font-light text-right">
                         Hedefiniz neresi olursa olsun, Avrupa'nın en seçkin üniversitelerine giden bu prestijli yolda Baykuş Akademi hep yanınızda.
                     </p>
-                    <div className="shrink-0 md:mt-6">
+                    <div className="shrink-0 mt-2.5 mr-14 md:mr-0 md:mt-6">
                         <Link href="/dersler/fransiz-universiteleri-danismanlik" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 md:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
                             Danışmanlığı İncele
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
