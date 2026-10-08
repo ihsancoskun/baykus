@@ -1,0 +1,7 @@
+Next.js 14+ (App Router), Tailwind CSS ve Lucide Icons kullanarak Baykuş Akademi için modern, lüks ve akademik bir frontend prototipi kur.
+
+Gereksinimler:
+1. /data/mockData.ts altında DELF/DALF, GSÜ, Branş Dersleri ve Başarı Rakamları için strongly-typed veri objeleri oluştur.
+2. Açılış ekranı (Hero): Fransız zarafetini yansıtan derin lacivert ve krem tonlarında, odaklanmış tipografi ve 2 CTA butonu içersin.
+3. Bento Grid: 21st.dev stilinde 4 bloklu interaktif başarı vitrini tasarla (%90 Fransa yerleştirme, 1000+ Sınav, GSÜ İç Sınav, 40 Yıllık Deneyim).
+4. Navigasyon: Mega menü mantığında Sınavlar, Branşlar, Yurtdışı Danışmanlık sekmelerini temiz açılır pencerelerle göster.

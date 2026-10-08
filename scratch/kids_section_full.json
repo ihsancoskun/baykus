@@ -1,0 +1,1202 @@
+{
+  "id": "3c0a14c4",
+  "elType": "container",
+  "settings": {
+    "flex_direction": "column",
+    "content_width": "full",
+    "flex_align_items_tablet": "center",
+    "background_background": "classic",
+    "background_color": "#FF8400",
+    "element_pack_agbg_color_list": [
+      {
+        "_id": "606d716",
+        "start_color": "#0591F9",
+        "end_color": "#fefefe"
+      },
+      {
+        "start_color": "#567445",
+        "end_color": "#1D1BE0",
+        "_id": "5c0cc9d"
+      }
+    ],
+    "padding": {
+      "unit": "px",
+      "top": "50",
+      "right": "0",
+      "bottom": "50",
+      "left": "0",
+      "isLinked": false
+    },
+    "padding_laptop": {
+      "unit": "px",
+      "top": "50",
+      "right": "50",
+      "bottom": "50",
+      "left": "50",
+      "isLinked": true
+    },
+    "padding_tablet": {
+      "unit": "px",
+      "top": "25",
+      "right": "25",
+      "bottom": "25",
+      "left": "25",
+      "isLinked": true
+    },
+    "padding_mobile": {
+      "unit": "px",
+      "top": "15",
+      "right": "15",
+      "bottom": "15",
+      "left": "15",
+      "isLinked": true
+    },
+    "ep_widget_cf_colors": "#D30C5C, #0EBCDC, #EAED41, #ED5A78, #DF33DF",
+    "ep_widget_cf_shapes": "square|circle",
+    "ep_widget_cf_shapes_emoji": "🎃|🎄|💜",
+    "ep_widget_cf_shapes_svg": "M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z|M120 240c-41,14 -91,18 -120,1 29,-10 57,-22 81,-40 -18,2 -37,3 -55,-3 25,-14 48,-30 66,-51 -11,5 -26,8 -45,7 20,-14 40,-30 57,-49 -13,1 -26,2 -38,-1 18,-11 35,-25 51,-43 -13,3 -24,5 -35,6 21,-19 40,-41 53,-67 14,26 32,48 54,67 -11,-1 -23,-3 -35,-6 15,18 32,32 51,43 -13,3 -26,2 -38,1 17,19 36,35 56,49 -19,1 -33,-2 -45,-7 19,21 42,37 67,51 -19,6 -37,5 -56,3 25,18 53,30 82,40 -30,17 -79,13 -120,-1l0 41 -31 0 0 -41z|M449.4 142c-5 0-10 .3-15 1a183 183 0 0 0-66.9-19.1V87.5a17.5 17.5 0 1 0-35 0v36.4a183 183 0 0 0-67 19c-4.9-.6-9.9-1-14.8-1C170.3 142 105 219.6 105 315s65.3 173 145.7 173c5 0 10-.3 14.8-1a184.7 184.7 0 0 0 169 0c4.9.7 9.9 1 14.9 1 80.3 0 145.6-77.6 145.6-173s-65.3-173-145.7-173zm-220 138 27.4-40.4a11.6 11.6 0 0 1 16.4-2.7l54.7 40.3a11.3 11.3 0 0 1-7 20.3H239a11.3 11.3 0 0 1-9.6-17.5zM444 383.8l-43.7 17.5a17.7 17.7 0 0 1-13 0l-37.3-15-37.2 15a17.8 17.8 0 0 1-13 0L256 383.8a17.5 17.5 0 0 1 13-32.6l37.3 15 37.2-15c4.2-1.6 8.8-1.6 13 0l37.3 15 37.2-15a17.5 17.5 0 0 1 13 32.6zm17-86.3h-82a11.3 11.3 0 0 1-6.9-20.4l54.7-40.3a11.6 11.6 0 0 1 16.4 2.8l27.4 40.4a11.3 11.3 0 0 1-9.6 17.5z",
+    "section_parallax_elements": [],
+    "element_pack_tile_scroll_elements": [],
+    "ep_display_conditions": [],
+    "background_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_slideshow_gallery": [],
+    "background_hover_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_hover_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_hover_slideshow_gallery": [],
+    "background_overlay_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_overlay_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_overlay_slideshow_gallery": [],
+    "background_overlay_hover_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_overlay_hover_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "background_overlay_hover_slideshow_gallery": [],
+    "ep_scroll_box_thumb_color_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "ep_scroll_box_thumb_color_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "ep_scroll_box_thumb_color_slideshow_gallery": [],
+    "ep_scroll_box_track_color_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "ep_scroll_box_track_color_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "ep_scroll_box_track_color_slideshow_gallery": [],
+    "element_pack_cursor_effects_image_src": {
+      "id": 1871,
+      "url": "https://baykusakademi.com/wp-content/uploads/2025/11/placeholder-145.png"
+    },
+    "element_pack_cursor_effects_icons": {
+      "value": "fas fa-laugh-wink",
+      "library": "fa-solid"
+    },
+    "element_pack_cursor_effects_text_background_image": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "element_pack_cursor_effects_text_background_video_fallback": {
+      "url": "",
+      "id": "",
+      "size": ""
+    },
+    "element_pack_cursor_effects_text_background_slideshow_gallery": []
+  },
+  "elements": [
+    {
+      "id": "7f34eae",
+      "elType": "container",
+      "settings": {
+        "element_pack_agbg_color_list": [
+          {
+            "_id": "4a3e398",
+            "start_color": "#0591F9",
+            "end_color": "#fefefe"
+          },
+          {
+            "start_color": "#567445",
+            "end_color": "#1D1BE0",
+            "_id": "0adad74"
+          }
+        ],
+        "ep_widget_cf_colors": "#D30C5C, #0EBCDC, #EAED41, #ED5A78, #DF33DF",
+        "ep_widget_cf_shapes": "square|circle",
+        "ep_widget_cf_shapes_emoji": "🎃|🎄|💜",
+        "ep_widget_cf_shapes_svg": "M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z|M120 240c-41,14 -91,18 -120,1 29,-10 57,-22 81,-40 -18,2 -37,3 -55,-3 25,-14 48,-30 66,-51 -11,5 -26,8 -45,7 20,-14 40,-30 57,-49 -13,1 -26,2 -38,-1 18,-11 35,-25 51,-43 -13,3 -24,5 -35,6 21,-19 40,-41 53,-67 14,26 32,48 54,67 -11,-1 -23,-3 -35,-6 15,18 32,32 51,43 -13,3 -26,2 -38,1 17,19 36,35 56,49 -19,1 -33,-2 -45,-7 19,21 42,37 67,51 -19,6 -37,5 -56,3 25,18 53,30 82,40 -30,17 -79,13 -120,-1l0 41 -31 0 0 -41z|M449.4 142c-5 0-10 .3-15 1a183 183 0 0 0-66.9-19.1V87.5a17.5 17.5 0 1 0-35 0v36.4a183 183 0 0 0-67 19c-4.9-.6-9.9-1-14.8-1C170.3 142 105 219.6 105 315s65.3 173 145.7 173c5 0 10-.3 14.8-1a184.7 184.7 0 0 0 169 0c4.9.7 9.9 1 14.9 1 80.3 0 145.6-77.6 145.6-173s-65.3-173-145.7-173zm-220 138 27.4-40.4a11.6 11.6 0 0 1 16.4-2.7l54.7 40.3a11.3 11.3 0 0 1-7 20.3H239a11.3 11.3 0 0 1-9.6-17.5zM444 383.8l-43.7 17.5a17.7 17.7 0 0 1-13 0l-37.3-15-37.2 15a17.8 17.8 0 0 1-13 0L256 383.8a17.5 17.5 0 0 1 13-32.6l37.3 15 37.2-15c4.2-1.6 8.8-1.6 13 0l37.3 15 37.2-15a17.5 17.5 0 0 1 13 32.6zm17-86.3h-82a11.3 11.3 0 0 1-6.9-20.4l54.7-40.3a11.6 11.6 0 0 1 16.4 2.8l27.4 40.4a11.3 11.3 0 0 1-9.6 17.5z",
+        "section_parallax_elements": [],
+        "element_pack_tile_scroll_elements": [],
+        "ep_display_conditions": [],
+        "background_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_slideshow_gallery": [],
+        "background_hover_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_hover_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_hover_slideshow_gallery": [],
+        "background_overlay_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_overlay_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_overlay_slideshow_gallery": [],
+        "background_overlay_hover_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_overlay_hover_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "background_overlay_hover_slideshow_gallery": [],
+        "ep_scroll_box_thumb_color_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_scroll_box_thumb_color_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_scroll_box_thumb_color_slideshow_gallery": [],
+        "ep_scroll_box_track_color_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_scroll_box_track_color_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_scroll_box_track_color_slideshow_gallery": [],
+        "element_pack_cursor_effects_image_src": {
+          "id": 1866,
+          "url": "https://baykusakademi.com/wp-content/uploads/2025/11/placeholder-143.png"
+        },
+        "element_pack_cursor_effects_icons": {
+          "value": "fas fa-laugh-wink",
+          "library": "fa-solid"
+        },
+        "element_pack_cursor_effects_text_background_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_cursor_effects_text_background_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_cursor_effects_text_background_slideshow_gallery": []
+      },
+      "elements": [
+        {
+          "id": "6dd1833a",
+          "elType": "widget",
+          "settings": {
+            "title": "Baykuş Kids ",
+            "header_size": "div",
+            "align": "center",
+            "ep_widget_cf_colors": "#D30C5C, #0EBCDC, #EAED41, #ED5A78, #DF33DF",
+            "ep_widget_cf_shapes": "square|circle",
+            "ep_widget_cf_shapes_emoji": "🎃|🎄|💜",
+            "ep_widget_cf_shapes_svg": "M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z|M120 240c-41,14 -91,18 -120,1 29,-10 57,-22 81,-40 -18,2 -37,3 -55,-3 25,-14 48,-30 66,-51 -11,5 -26,8 -45,7 20,-14 40,-30 57,-49 -13,1 -26,2 -38,-1 18,-11 35,-25 51,-43 -13,3 -24,5 -35,6 21,-19 40,-41 53,-67 14,26 32,48 54,67 -11,-1 -23,-3 -35,-6 15,18 32,32 51,43 -13,3 -26,2 -38,1 17,19 36,35 56,49 -19,1 -33,-2 -45,-7 19,21 42,37 67,51 -19,6 -37,5 -56,3 25,18 53,30 82,40 -30,17 -79,13 -120,-1l0 41 -31 0 0 -41z|M449.4 142c-5 0-10 .3-15 1a183 183 0 0 0-66.9-19.1V87.5a17.5 17.5 0 1 0-35 0v36.4a183 183 0 0 0-67 19c-4.9-.6-9.9-1-14.8-1C170.3 142 105 219.6 105 315s65.3 173 145.7 173c5 0 10-.3 14.8-1a184.7 184.7 0 0 0 169 0c4.9.7 9.9 1 14.9 1 80.3 0 145.6-77.6 145.6-173s-65.3-173-145.7-173zm-220 138 27.4-40.4a11.6 11.6 0 0 1 16.4-2.7l54.7 40.3a11.3 11.3 0 0 1-7 20.3H239a11.3 11.3 0 0 1-9.6-17.5zM444 383.8l-43.7 17.5a17.7 17.7 0 0 1-13 0l-37.3-15-37.2 15a17.8 17.8 0 0 1-13 0L256 383.8a17.5 17.5 0 0 1 13-32.6l37.3 15 37.2-15c4.2-1.6 8.8-1.6 13 0l37.3 15 37.2-15a17.5 17.5 0 0 1 13 32.6zm17-86.3h-82a11.3 11.3 0 0 1-6.9-20.4l54.7-40.3a11.6 11.6 0 0 1 16.4 2.8l27.4 40.4a11.3 11.3 0 0 1-9.6 17.5z",
+            "ep_notation_list": [
+              {
+                "_id": "56f7a36",
+                "ep_notation_bracket_on": "left,right",
+                "ep_notation_select_type": "widget",
+                "ep_notation_custom_selector": "",
+                "ep_notation_type": "underline",
+                "ep_notation_color": "",
+                "ep_notation_stroke_width": {
+                  "unit": "px",
+                  "size": 1,
+                  "sizes": []
+                },
+                "ep_notation_infinity_loop": "",
+                "ep_notation_anim_duration": {
+                  "unit": "px",
+                  "size": 800,
+                  "sizes": []
+                },
+                "ep_notation_loop_delay": {
+                  "unit": "px",
+                  "size": 5000,
+                  "sizes": []
+                },
+                "ep_notation_waypoint_offset": ""
+              }
+            ],
+            "ep_sound_effects_element_selector": "my-header",
+            "element_pack_widget_tooltip_text": "This is Tooltip",
+            "ep_display_conditions": [],
+            "ep_parallax_effects_transition_for": "all",
+            "ep_parallax_effects_transition_duration": "100",
+            "ep_parallax_effects_transition_easing": "linear",
+            "element_pack_widget_effect_transition_duration": "300",
+            "element_pack_widget_effect_transition_easing": "ease-out",
+            "__globals__": {
+              "typography_typography": "globals/typography?id=primary",
+              "title_color": "globals/colors?id=primary"
+            },
+            "title_color": "#212427",
+            "_element_custom_width": {
+              "unit": "px",
+              "size": 614,
+              "sizes": []
+            },
+            "_element_custom_width_laptop": {
+              "unit": "px",
+              "size": 551,
+              "sizes": []
+            },
+            "ep_widget_sf_fx_fill_bg_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_stop_laptop": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_stop_tablet": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_stop_mobile": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "ep_widget_sf_fx_fill_bg_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "ep_widget_sf_fx_fill_bg_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "ep_widget_sf_fx_fill_bg_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "ep_widget_sf_fx_fill_bg_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "ep_widget_sf_fx_fill_bg_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "element_pack_cursor_effects_text_background_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_stop_laptop": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_stop_tablet": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_stop_mobile": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "element_pack_cursor_effects_text_background_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "element_pack_cursor_effects_text_background_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "element_pack_cursor_effects_text_background_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "element_pack_cursor_effects_text_background_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "element_pack_cursor_effects_text_background_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "element_pack_widget_tooltip_background_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_stop_laptop": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_stop_tablet": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_stop_mobile": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "element_pack_widget_tooltip_background_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "element_pack_widget_tooltip_background_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "element_pack_widget_tooltip_background_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "element_pack_widget_tooltip_background_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "element_pack_widget_tooltip_background_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "_background_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "_background_color_stop_laptop": {
+              "unit": "%"
+            },
+            "_background_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "_background_color_stop_tablet": {
+              "unit": "%"
+            },
+            "_background_color_stop_mobile": {
+              "unit": "%"
+            },
+            "_background_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "_background_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "_background_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "_background_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "_background_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "_background_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "_background_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "_background_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "_background_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "_background_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "_background_hover_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "_background_hover_color_stop_laptop": {
+              "unit": "%"
+            },
+            "_background_hover_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "_background_hover_color_stop_tablet": {
+              "unit": "%"
+            },
+            "_background_hover_color_stop_mobile": {
+              "unit": "%"
+            },
+            "_background_hover_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "_background_hover_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "_background_hover_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "_background_hover_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "_background_hover_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "_background_hover_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "_background_hover_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "_background_hover_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "_background_hover_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "_background_hover_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_stop_laptop": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_stop_tablet": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_stop_mobile": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "ep_background_overlay_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "ep_background_overlay_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_hover_color_stop_widescreen": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_stop_laptop": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_stop_tablet": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_stop_mobile": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_b_stop_widescreen": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_b_stop_laptop": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_b_stop_tablet_extra": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_b_stop_tablet": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_color_b_stop_mobile": {
+              "unit": "%"
+            },
+            "ep_background_overlay_hover_gradient_angle_widescreen": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_hover_gradient_angle_laptop": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_hover_gradient_angle_tablet_extra": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_hover_gradient_angle_tablet": {
+              "unit": "deg"
+            },
+            "ep_background_overlay_hover_gradient_angle_mobile": {
+              "unit": "deg"
+            },
+            "ep_widget_sf_fx_fill_bg_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_widget_sf_fx_fill_bg_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_widget_sf_fx_fill_bg_slideshow_gallery": [],
+            "element_pack_cursor_effects_image_src": {
+              "id": 1864,
+              "url": "https://baykusakademi.com/wp-content/uploads/2025/11/placeholder-141.png"
+            },
+            "element_pack_cursor_effects_icons": {
+              "value": "fas fa-laugh-wink",
+              "library": "fa-solid"
+            },
+            "element_pack_cursor_effects_text_background_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_cursor_effects_text_background_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_cursor_effects_text_background_slideshow_gallery": [],
+            "ep_sound_effects_hosted_url": {
+              "id": "",
+              "url": "https://baykusakademi.com/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "ep_sound_effects_hosted_url_mp3": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_widget_tooltip_background_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_widget_tooltip_background_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_widget_tooltip_background_slideshow_gallery": [],
+            "_background_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_slideshow_gallery": [],
+            "_background_hover_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_hover_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_hover_slideshow_gallery": [],
+            "ep_background_overlay_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_slideshow_gallery": [],
+            "ep_background_overlay_hover_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_hover_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_hover_slideshow_gallery": [],
+            "_mask_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            }
+          },
+          "elements": [],
+          "widgetType": "heading"
+        },
+        {
+          "id": "32e8649a",
+          "elType": "widget",
+          "settings": {
+            "editor": "<p>Küçük yaşta öğrenmenin büyüsüne inanıyoruz!  Baykuş Kids, çocukların hem okul derslerinde hem de yabancı dil öğreniminde güçlü bir temel kazanmaları için özel olarak tasarlandı.</p>",
+            "align": "center",
+            "paragraph_spacing": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            },
+            "ep_widget_cf_colors": "#D30C5C, #0EBCDC, #EAED41, #ED5A78, #DF33DF",
+            "ep_widget_cf_shapes": "square|circle",
+            "ep_widget_cf_shapes_emoji": "🎃|🎄|💜",
+            "ep_widget_cf_shapes_svg": "M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z|M120 240c-41,14 -91,18 -120,1 29,-10 57,-22 81,-40 -18,2 -37,3 -55,-3 25,-14 48,-30 66,-51 -11,5 -26,8 -45,7 20,-14 40,-30 57,-49 -13,1 -26,2 -38,-1 18,-11 35,-25 51,-43 -13,3 -24,5 -35,6 21,-19 40,-41 53,-67 14,26 32,48 54,67 -11,-1 -23,-3 -35,-6 15,18 32,32 51,43 -13,3 -26,2 -38,1 17,19 36,35 56,49 -19,1 -33,-2 -45,-7 19,21 42,37 67,51 -19,6 -37,5 -56,3 25,18 53,30 82,40 -30,17 -79,13 -120,-1l0 41 -31 0 0 -41z|M449.4 142c-5 0-10 .3-15 1a183 183 0 0 0-66.9-19.1V87.5a17.5 17.5 0 1 0-35 0v36.4a183 183 0 0 0-67 19c-4.9-.6-9.9-1-14.8-1C170.3 142 105 219.6 105 315s65.3 173 145.7 173c5 0 10-.3 14.8-1a184.7 184.7 0 0 0 169 0c4.9.7 9.9 1 14.9 1 80.3 0 145.6-77.6 145.6-173s-65.3-173-145.7-173zm-220 138 27.4-40.4a11.6 11.6 0 0 1 16.4-2.7l54.7 40.3a11.3 11.3 0 0 1-7 20.3H239a11.3 11.3 0 0 1-9.6-17.5zM444 383.8l-43.7 17.5a17.7 17.7 0 0 1-13 0l-37.3-15-37.2 15a17.8 17.8 0 0 1-13 0L256 383.8a17.5 17.5 0 0 1 13-32.6l37.3 15 37.2-15c4.2-1.6 8.8-1.6 13 0l37.3 15 37.2-15a17.5 17.5 0 0 1 13 32.6zm17-86.3h-82a11.3 11.3 0 0 1-6.9-20.4l54.7-40.3a11.6 11.6 0 0 1 16.4 2.8l27.4 40.4a11.3 11.3 0 0 1-9.6 17.5z",
+            "ep_notation_list": [
+              {
+                "_id": "2d833af",
+                "ep_notation_bracket_on": "left,right",
+                "ep_notation_select_type": "widget",
+                "ep_notation_custom_selector": "",
+                "ep_notation_type": "underline",
+                "ep_notation_color": "",
+                "ep_notation_stroke_width": {
+                  "unit": "px",
+                  "size": 1,
+                  "sizes": []
+                },
+                "ep_notation_infinity_loop": "",
+                "ep_notation_anim_duration": {
+                  "unit": "px",
+                  "size": 800,
+                  "sizes": []
+                },
+                "ep_notation_loop_delay": {
+                  "unit": "px",
+                  "size": 5000,
+                  "sizes": []
+                },
+                "ep_notation_waypoint_offset": ""
+              }
+            ],
+            "ep_sound_effects_element_selector": "my-header",
+            "element_pack_widget_tooltip_text": "This is Tooltip",
+            "ep_display_conditions": [],
+            "ep_parallax_effects_transition_for": "all",
+            "ep_parallax_effects_transition_duration": "100",
+            "ep_parallax_effects_transition_easing": "linear",
+            "element_pack_widget_effect_transition_duration": "300",
+            "element_pack_widget_effect_transition_easing": "ease-out",
+            "__globals__": {
+              "text_color": "globals/colors?id=primary"
+            },
+            "ep_scroll_box_thumb_color_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_scroll_box_thumb_color_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_scroll_box_thumb_color_slideshow_gallery": [],
+            "ep_scroll_box_track_color_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_scroll_box_track_color_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_scroll_box_track_color_slideshow_gallery": [],
+            "element_pack_cursor_effects_image_src": {
+              "id": 1865,
+              "url": "https://baykusakademi.com/wp-content/uploads/2025/11/placeholder-142.png"
+            },
+            "element_pack_cursor_effects_icons": {
+              "value": "fas fa-laugh-wink",
+              "library": "fa-solid"
+            },
+            "element_pack_cursor_effects_text_background_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_cursor_effects_text_background_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_cursor_effects_text_background_slideshow_gallery": [],
+            "ep_sound_effects_hosted_url": {
+              "id": "",
+              "url": "https://baykusakademi.com/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "ep_sound_effects_hosted_url_mp3": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_widget_tooltip_background_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_widget_tooltip_background_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "element_pack_widget_tooltip_background_slideshow_gallery": [],
+            "_background_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_slideshow_gallery": [],
+            "_background_hover_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_hover_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "_background_hover_slideshow_gallery": [],
+            "ep_background_overlay_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_slideshow_gallery": [],
+            "ep_background_overlay_hover_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_hover_video_fallback": {
+              "url": "",
+              "id": "",
+              "size": ""
+            },
+            "ep_background_overlay_hover_slideshow_gallery": [],
+            "_mask_image": {
+              "url": "",
+              "id": "",
+              "size": ""
+            }
+          },
+          "elements": [],
+          "widgetType": "text-editor"
+        }
+      ],
+      "isInner": true
+    },
+    {
+      "id": "3937a313",
+      "elType": "widget",
+      "settings": {
+        "slides": [
+          {
+            "image": {
+              "id": 1867,
+              "url": "https://baykusakademi.com/wp-content/uploads/2025/11/2.png"
+            },
+            "_id": "d113196",
+            "type": "image",
+            "image_link_to_type": "",
+            "image_link_to": {
+              "url": "",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "video": {
+              "url": "",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            }
+          },
+          {
+            "image": {
+              "id": 1868,
+              "url": "https://baykusakademi.com/wp-content/uploads/2025/11/3.png"
+            },
+            "_id": "4a4876b",
+            "type": "image",
+            "image_link_to_type": "",
+            "image_link_to": {
+              "url": "",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "video": {
+              "url": "",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            }
+          },
+          {
+            "image": {
+              "id": 1869,
+              "url": "https://baykusakademi.com/wp-content/uploads/2025/11/1.png"
+            },
+            "_id": "8f07862",
+            "type": "image",
+            "image_link_to_type": "",
+            "image_link_to": {
+              "url": "",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "video": {
+              "url": "",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            }
+          }
+        ],
+        "skin_template_slides": [
+          {
+            "image": {
+              "url": "https://www.fcyproduction.com/baykus/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "_id": "50650c0",
+            "editor_content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "source": "editor",
+            "template_source": "elementor",
+            "elementor_template": "",
+            "anywhere_template": ""
+          },
+          {
+            "image": {
+              "url": "https://www.fcyproduction.com/baykus/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "_id": "c8ed36f",
+            "editor_content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "source": "editor",
+            "template_source": "elementor",
+            "elementor_template": "",
+            "anywhere_template": ""
+          },
+          {
+            "image": {
+              "url": "https://www.fcyproduction.com/baykus/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "_id": "492a7fa",
+            "editor_content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "source": "editor",
+            "template_source": "elementor",
+            "elementor_template": "",
+            "anywhere_template": ""
+          },
+          {
+            "image": {
+              "url": "https://www.fcyproduction.com/baykus/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "_id": "fea14ef",
+            "editor_content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "source": "editor",
+            "template_source": "elementor",
+            "elementor_template": "",
+            "anywhere_template": ""
+          },
+          {
+            "image": {
+              "url": "https://www.fcyproduction.com/baykus/wp-content/plugins/elementor/assets/images/placeholder.png"
+            },
+            "_id": "c05024e",
+            "editor_content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "source": "editor",
+            "template_source": "elementor",
+            "elementor_template": "",
+            "anywhere_template": ""
+          }
+        ],
+        "space_between": {
+          "unit": "px",
+          "size": 15,
+          "sizes": []
+        },
+        "height": {
+          "unit": "px",
+          "size": 440,
+          "sizes": []
+        },
+        "image_size_size": "large",
+        "hide_arrow_on_mobile": "",
+        "_margin": {
+          "unit": "px",
+          "top": "50",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        },
+        "_element_width_tablet": "initial",
+        "_element_custom_width_tablet": {
+          "unit": "%",
+          "size": 80,
+          "sizes": []
+        },
+        "_element_custom_width_mobile": {
+          "unit": "%",
+          "size": "",
+          "sizes": []
+        },
+        "ep_widget_cf_colors": "#D30C5C, #0EBCDC, #EAED41, #ED5A78, #DF33DF",
+        "ep_widget_cf_shapes": "square|circle",
+        "ep_widget_cf_shapes_emoji": "🎃|🎄|💜",
+        "ep_widget_cf_shapes_svg": "M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z|M120 240c-41,14 -91,18 -120,1 29,-10 57,-22 81,-40 -18,2 -37,3 -55,-3 25,-14 48,-30 66,-51 -11,5 -26,8 -45,7 20,-14 40,-30 57,-49 -13,1 -26,2 -38,-1 18,-11 35,-25 51,-43 -13,3 -24,5 -35,6 21,-19 40,-41 53,-67 14,26 32,48 54,67 -11,-1 -23,-3 -35,-6 15,18 32,32 51,43 -13,3 -26,2 -38,1 17,19 36,35 56,49 -19,1 -33,-2 -45,-7 19,21 42,37 67,51 -19,6 -37,5 -56,3 25,18 53,30 82,40 -30,17 -79,13 -120,-1l0 41 -31 0 0 -41z|M449.4 142c-5 0-10 .3-15 1a183 183 0 0 0-66.9-19.1V87.5a17.5 17.5 0 1 0-35 0v36.4a183 183 0 0 0-67 19c-4.9-.6-9.9-1-14.8-1C170.3 142 105 219.6 105 315s65.3 173 145.7 173c5 0 10-.3 14.8-1a184.7 184.7 0 0 0 169 0c4.9.7 9.9 1 14.9 1 80.3 0 145.6-77.6 145.6-173s-65.3-173-145.7-173zm-220 138 27.4-40.4a11.6 11.6 0 0 1 16.4-2.7l54.7 40.3a11.3 11.3 0 0 1-7 20.3H239a11.3 11.3 0 0 1-9.6-17.5zM444 383.8l-43.7 17.5a17.7 17.7 0 0 1-13 0l-37.3-15-37.2 15a17.8 17.8 0 0 1-13 0L256 383.8a17.5 17.5 0 0 1 13-32.6l37.3 15 37.2-15c4.2-1.6 8.8-1.6 13 0l37.3 15 37.2-15a17.5 17.5 0 0 1 13 32.6zm17-86.3h-82a11.3 11.3 0 0 1-6.9-20.4l54.7-40.3a11.6 11.6 0 0 1 16.4 2.8l27.4 40.4a11.3 11.3 0 0 1-9.6 17.5z",
+        "ep_notation_list": [
+          {
+            "_id": "68566ea",
+            "ep_notation_bracket_on": "left,right",
+            "ep_notation_select_type": "widget",
+            "ep_notation_custom_selector": "",
+            "ep_notation_type": "underline",
+            "ep_notation_color": "",
+            "ep_notation_stroke_width": {
+              "unit": "px",
+              "size": 1,
+              "sizes": []
+            },
+            "ep_notation_infinity_loop": "",
+            "ep_notation_anim_duration": {
+              "unit": "px",
+              "size": 800,
+              "sizes": []
+            },
+            "ep_notation_loop_delay": {
+              "unit": "px",
+              "size": 5000,
+              "sizes": []
+            },
+            "ep_notation_waypoint_offset": ""
+          }
+        ],
+        "ep_sound_effects_element_selector": "my-header",
+        "element_pack_widget_tooltip_text": "This is Tooltip",
+        "ep_display_conditions": [],
+        "ep_parallax_effects_transition_for": "all",
+        "ep_parallax_effects_transition_duration": "100",
+        "ep_parallax_effects_transition_easing": "linear",
+        "element_pack_widget_effect_transition_duration": "300",
+        "element_pack_widget_effect_transition_easing": "ease-out",
+        "image_mask_shape_custom": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_cursor_effects_image_src": {
+          "id": 1870,
+          "url": "https://baykusakademi.com/wp-content/uploads/2025/11/placeholder-144.png"
+        },
+        "element_pack_cursor_effects_icons": {
+          "value": "fas fa-laugh-wink",
+          "library": "fa-solid"
+        },
+        "element_pack_cursor_effects_text_background_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_cursor_effects_text_background_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_cursor_effects_text_background_slideshow_gallery": [],
+        "ep_sound_effects_hosted_url": {
+          "id": "",
+          "url": "https://baykusakademi.com/wp-content/plugins/elementor/assets/images/placeholder.png"
+        },
+        "ep_sound_effects_hosted_url_mp3": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_widget_tooltip_background_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_widget_tooltip_background_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "element_pack_widget_tooltip_background_slideshow_gallery": [],
+        "_background_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "_background_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "_background_slideshow_gallery": [],
+        "_background_hover_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "_background_hover_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "_background_hover_slideshow_gallery": [],
+        "ep_background_overlay_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_background_overlay_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_background_overlay_slideshow_gallery": [],
+        "ep_background_overlay_hover_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_background_overlay_hover_video_fallback": {
+          "url": "",
+          "id": "",
+          "size": ""
+        },
+        "ep_background_overlay_hover_slideshow_gallery": [],
+        "_mask_image": {
+          "url": "",
+          "id": "",
+          "size": ""
+        }
+      },
+      "elements": [],
+      "widgetType": "bdt-custom-carousel"
+    }
+  ],
+  "isInner": false
+}
