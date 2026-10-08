@@ -247,6 +247,17 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
         };
     }, [smoothMorph, smoothScrollRotate, smoothGrid, smoothMouseX]);
 
+    // --- Ring geometry (shared by cards and the center portrait) ---
+    const isMobile = containerSize.width < 768;
+    const minDimension = Math.min(containerSize.width, containerSize.height);
+    // Mobile: thinner cards so the center hole keeps the same proportions as desktop
+    const cardScale = isMobile ? Math.min(0.55, Math.max(0.3, minDimension / 900)) : 1;
+    const cardHalfExtent = (IMG_HEIGHT / 2) * 1.2 * cardScale;
+    const maxRadius = isMobile
+        ? Math.max(40, minDimension / 2 - cardHalfExtent - 4)
+        : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380);
+    const holeDiameter = Math.max(0, (maxRadius - cardHalfExtent) * 2);
+
     return (
         <div ref={containerRef} className="relative w-full h-[130vh] bg-white">
           <div ref={stickyRef} className="sticky top-0 w-full h-[100svh] md:h-screen overflow-hidden bg-white">
@@ -352,7 +363,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                                 ? { duration: 0, ease: "linear" }
                                 : { duration: 1.5, type: "spring", stiffness: 100 }
                         }
-                        className="absolute z-10 hidden md:flex flex-col items-center justify-center pointer-events-none will-change-transform"
+                        className="absolute z-10 flex flex-col items-center justify-center pointer-events-none will-change-transform"
                         style={{
                             left: "50%",
                             top: "50%",
@@ -363,9 +374,10 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                         <img 
                             src="/media/2025/05/baykus-yatay-01.png" 
                             alt="Baykuş Akademi" 
-                            className="w-[120px] sm:w-[240px] md:w-[300px] lg:w-[340px] xl:w-[380px] object-contain drop-shadow-2xl"
+                            className="md:w-[300px] lg:w-[340px] xl:w-[380px] object-contain drop-shadow-2xl"
+                            style={isMobile ? { width: Math.round(holeDiameter * 0.74) } : undefined}
                         />
-                        <p className="mt-4 text-[9px] sm:text-[10px] md:text-xs text-[#263147]/80 font-sans font-light leading-relaxed max-w-[200px] sm:max-w-[280px] md:max-w-[340px] text-center">
+                        <p className="hidden md:block mt-4 text-[9px] sm:text-[10px] md:text-xs text-[#263147]/80 font-sans font-light leading-relaxed max-w-[200px] sm:max-w-[280px] md:max-w-[340px] text-center">
                             Fransızca eğitiminde sınav kazandıran sistem. Fransa Üniversiteleri yurt dışı eğitim danışmanlığı, DELF / DALF, GSÜ İç Sınav, ve Baccalauréat eğitimleri.
                         </p>
                     </motion.div>
@@ -391,16 +403,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                             // 2. Owl Phase & Morph Logic
 
                             // Responsive Calculations
-                            const isMobile = containerSize.width < 768;
-                            const minDimension = Math.min(containerSize.width, containerSize.height);
-
-                            // On mobile, shrink cards and fit the whole ring (cards included) inside the free ring area
-                            const cardScale = isMobile ? Math.min(0.7, Math.max(0.35, minDimension / 560)) : 1;
-                            const cardHalfExtent = (IMG_HEIGHT / 2) * 1.2 * cardScale;
-
-                            // A. Calculate Circle Position
-                            // Original massive ring behavior
-                            const maxRadius = isMobile ? Math.max(40, minDimension / 2 - cardHalfExtent - 4) : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380); 
+                            // A. Calculate Circle Position (geometry computed above)
                             const owlScale = maxRadius / 280;
                             
                             // Keep it perfectly centered as requested
