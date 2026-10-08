@@ -17,16 +17,18 @@ async function getPages() {
 // Generate static routes for all 40 pages!
 export async function generateStaticParams() {
   const pages = await getPages();
-  return pages.map((page: any) => ({
-    slug: page.slug,
-  }));
+  return pages
+    .filter((page: any) => page.content && page.content.trim().length > 0)
+    .map((page: any) => ({
+      slug: page.slug,
+    }));
 }
 
 export default async function CoursePage({ params }: { params: { slug: string } }) {
   const pages = await getPages();
   const course = pages.find((p: any) => p.slug === params.slug);
 
-  if (!course) {
+  if (!course || !course.content || !course.content.trim()) {
     notFound();
   }
 
