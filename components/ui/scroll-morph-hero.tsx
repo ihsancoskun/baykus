@@ -278,7 +278,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                     initial={{ opacity: 0, y: -60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 100 }}
-                    className="absolute z-30 top-24 sm:top-28 md:top-32 left-4 sm:left-8 md:left-12 max-w-[90vw] sm:max-w-[50vw] md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-left"
+                    className="absolute z-30 top-20 sm:top-28 md:top-32 left-4 sm:left-8 md:left-12 max-w-[85vw] sm:max-w-[50vw] md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-left bg-white/60 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl shadow-lg sm:shadow-none border border-white/40 sm:border-transparent"
                 >
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif text-navy leading-[1.15] tracking-tight">
                         Fransız Ekolünde <br/>
@@ -300,7 +300,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1, type: "spring", stiffness: 100 }}
-                    className="absolute z-30 bottom-16 sm:bottom-20 md:bottom-24 right-4 sm:right-8 md:right-12 xl:right-[100px] 2xl:right-[120px] max-w-[90vw] sm:max-w-[50vw] md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-right flex flex-col items-end"
+                    className="absolute z-30 bottom-16 sm:bottom-20 md:bottom-24 right-4 sm:right-8 md:right-12 xl:right-[100px] 2xl:right-[120px] max-w-[85vw] sm:max-w-[50vw] md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-right flex flex-col items-end bg-white/60 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl shadow-lg sm:shadow-none border border-white/40 sm:border-transparent"
                 >
                     <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-serif text-navy leading-[1.15] tracking-tight text-right">
                         Geleceğe Açılan <br/> 
@@ -361,9 +361,9 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                         <img 
                             src="/media/2025/05/baykus-yatay-01.png" 
                             alt="Baykuş Akademi" 
-                            className="w-[180px] sm:w-[240px] md:w-[300px] lg:w-[340px] xl:w-[380px] object-contain drop-shadow-2xl"
+                            className="w-[120px] sm:w-[240px] md:w-[300px] lg:w-[340px] xl:w-[380px] object-contain drop-shadow-2xl"
                         />
-                        <p className="mt-4 text-[10px] md:text-xs text-[#263147]/80 font-sans font-light leading-relaxed max-w-[280px] md:max-w-[340px] text-center">
+                        <p className="mt-4 text-[9px] sm:text-[10px] md:text-xs text-[#263147]/80 font-sans font-light leading-relaxed max-w-[200px] sm:max-w-[280px] md:max-w-[340px] text-center">
                             Fransızca eğitiminde sınav kazandıran sistem. Fransa Üniversiteleri yurt dışı eğitim danışmanlığı, DELF / DALF, GSÜ İç Sınav, ve Baccalauréat eğitimleri.
                         </p>
                     </motion.div>
@@ -394,7 +394,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
 
                             // A. Calculate Circle Position
                             // Original massive ring behavior
-                            const maxRadius = isMobile ? containerSize.width * 0.32 : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380); 
+                            const maxRadius = isMobile ? containerSize.width * 0.28 : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380); 
                             const owlScale = maxRadius / 280;
                             
                             // Keep it perfectly centered as requested
