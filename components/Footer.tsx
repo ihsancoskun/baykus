@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -171,41 +171,41 @@ export default function Footer() {
     {
       title: "Kurumsal",
       links: [
-        { label: "HakkÄ±mÄ±zda", href: "/dersler/hakkimizda" },
+        { label: "Hakkımızda", href: "/dersler/hakkimizda" },
         { label: "Hizmetlerimiz", href: "/" },
         { label: "Kariyer", href: "/iletisim" },
-        { label: "Ä°letiÅŸim", href: "/iletisim" },
+        { label: "İletişim", href: "/iletisim" },
       ],
     },
     {
-      title: "FransÄ±zca",
+      title: "Fransızca",
       links: [
-        { label: "Fransa'daki Ãœniversitelere BaÅŸvuru", href: "/dersler/fransiz-universiteler-basvuru-danismanligi" },
-        { label: "Frankofon OkullarÄ±n TÃ¼m BranÅŸlarÄ±", href: "/dersler/fransizca-matematik-dersleri" },
-        { label: "Galatasaray Ãœniversitesi Ä°Ã§ SÄ±navlar", href: "/dersler/gsicsinavlar" },
-        { label: "AtÃ¶lyelerle FransÄ±zca", href: "/iletisim" },
-        { label: "Oyunlarla FransÄ±zca", href: "/iletisim" },
-        { label: "Mesleki FransÄ±zca", href: "/iletisim" },
+        { label: "Fransa'daki Üniversitelere Başvuru", href: "/dersler/fransiz-universiteler-basvuru-danismanligi" },
+        { label: "Frankofon Okulların Tüm Branşları", href: "/dersler/fransizca-matematik-dersleri" },
+        { label: "Galatasaray Üniversitesi İç Sınavlar", href: "/dersler/gsicsinavlar" },
+        { label: "Atölyelerle Fransızca", href: "/iletisim" },
+        { label: "Oyunlarla Fransızca", href: "/iletisim" },
+        { label: "Mesleki Fransızca", href: "/iletisim" },
       ],
     },
     {
-      title: "YabancÄ± Diller",
+      title: "Yabancı Diller",
       links: [
-        { label: "FransÄ±zca", href: "/dersler/fransizca" },
-        { label: "Ä°ngilizce", href: "/dersler/ingilizce" },
+        { label: "Fransızca", href: "/dersler/fransizca" },
+        { label: "İngilizce", href: "/dersler/ingilizce" },
         { label: "Almanca", href: "/dersler/almanca" },
-        { label: "Ä°spanyolca", href: "/dersler/ispanyolca" },
-        { label: "Ä°talyanca", href: "/dersler/italyanca" },
-        { label: "TÃ¼rkÃ§e / Turkish for foreigners", href: "/dersler/turkishlessons" },
+        { label: "İspanyolca", href: "/dersler/ispanyolca" },
+        { label: "İtalyanca", href: "/dersler/italyanca" },
+        { label: "Türkçe / Turkish for foreigners", href: "/dersler/turkishlessons" },
       ],
     },
     {
-      title: "SÄ±navlar",
+      title: "Sınavlar",
       links: [
         { label: "BREVET", href: "/dersler/brevet" },
         { label: "BACCALAUREAT", href: "/dersler/baccalaureat" },
         { label: "DELF, DALF", href: "/dersler/delf-dalf" },
-        { label: "GSÃœ Ä°Ã‡ SINAVLAR", href: "/dersler/gsicsinavlar" },
+        { label: "GSÜ İÇ SINAVLAR", href: "/dersler/gsicsinavlar" },
         { label: "SAT FRENCH", href: "/dersler/satfrench" },
         { label: "TOEFL, SAT", href: "/dersler/toefl" },
         { label: "CHECK POINT", href: "/dersler/cambridge" },
@@ -226,9 +226,9 @@ export default function Footer() {
     },
     {
       icon: <MapPin size={18} className="text-[#b3855a] group-hover:text-white transition-colors mt-1 shrink-0" />,
-      text: "Sezai Selek sokak Ã‡aÄŸlayan ApartmanÄ± No:17 Daire 8 Kat 3 NiÅŸantaÅŸÄ± / Ä°stanbul",
-      href: "https://maps.google.com/?q=Sezai+Selek+Sok.+Ã‡aÄŸlayan+Apt.+NiÅŸantaÅŸÄ±+Ä°stanbul",
-      description: "*Amerikan Hastanesi'nin arka sokaÄŸÄ±. 'Vet republic' karÅŸÄ±sÄ±ndaki bina. Rumeli Caddesinden geliyorsanÄ±z; polen pastanesi'ni gÃ¶rÃ¼nce hemen o sokaktan saÄŸa sapmanÄ±z gerekiyor. Metroyla geliyorsanÄ±z Osmanbey duraÄŸÄ±nda inip NiÅŸantaÅŸÄ±/Rumeli caddesi Ã§Ä±kÄ±ÅŸÄ±ndan Ã§Ä±kmanÄ±z gerekiyor."
+      text: "Sezai Selek sokak Çağlayan Apartmanı No:17 Daire 8 Kat 3 Nişantaşı / İstanbul",
+      href: "https://maps.google.com/?q=Sezai+Selek+Sok.+Çağlayan+Apt.+Nişantaşı+İstanbul",
+      description: "*Amerikan Hastanesi'nin arka sokağı. 'Vet republic' karşısındaki bina. Rumeli Caddesinden geliyorsanız; polen pastanesi'ni görünce hemen o sokaktan sağa sapmanız gerekiyor. Metroyla geliyorsanız Osmanbey durağında inip Nişantaşı/Rumeli caddesi çıkışından çıkmanız gerekiyor."
     },
   ];
 
@@ -252,14 +252,14 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <img 
                 src="/media/2025/05/baykus-yatay-01.png" 
-                alt="BaykuÅŸ Akademi Logo" 
+                alt="Baykuş Akademi Logo" 
                 className="h-16 w-auto object-contain bg-white/5 p-2 rounded-xl border border-white/10" 
               />
             </div>
             
             <p className="text-sm leading-relaxed text-white/70">
-              <span className="font-semibold text-red-500 block mb-1">Tek Adres: NiÅŸantaÅŸÄ±</span>
-              Kaliteden Ã¶dÃ¼n vermemek iÃ§in ÅŸubemiz yok.
+              <span className="font-semibold text-red-500 block mb-1">Tek Adres: Nişantaşı</span>
+              Kaliteden ödün vermemek için şubemiz yok.
             </p>
 
             <ul className="space-y-4 text-white/70 pt-2">
@@ -335,14 +335,14 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-center md:text-left font-medium tracking-wide z-50">
-            &copy; {new Date().getFullYear()} BaykuÅŸ Akademi. TÃ¼m haklarÄ± saklÄ±dÄ±r.
+            &copy; {new Date().getFullYear()} Baykuş Akademi. Tüm hakları saklıdır.
           </p>
         </div>
       </div>
 
       {/* Text hover effect (Hidden on mobile, large on desktop) */}
       <div className="lg:flex hidden h-[22rem] -mt-28 -mb-20 pointer-events-auto z-10 relative">
-        <TextHoverEffect text="BAYKUÅ" className="z-10" />
+        <TextHoverEffect text="BAYKUŞ" className="z-10" />
       </div>
 
       <FooterBackgroundGradient />
