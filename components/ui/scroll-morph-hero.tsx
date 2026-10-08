@@ -140,10 +140,12 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
     const containerRef = useRef<HTMLDivElement>(null);
     const stickyRef = useRef<HTMLDivElement>(null);
+    const ringRef = useRef<HTMLDivElement>(null);
 
-    // --- Container Size ---
+    // --- Container Size (measured on the ring area so mobile can size the ring to the free space) ---
     useEffect(() => {
-        if (!stickyRef.current) return;
+        const el = ringRef.current;
+        if (!el) return;
 
         const handleResize = (entries: ResizeObserverEntry[]) => {
             for (const entry of entries) {
@@ -155,12 +157,12 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
         };
 
         const observer = new ResizeObserver(handleResize);
-        observer.observe(stickyRef.current);
+        observer.observe(el);
 
         // Initial set
         setContainerSize({
-            width: stickyRef.current.offsetWidth,
-            height: stickyRef.current.offsetHeight,
+            width: el.offsetWidth,
+            height: el.offsetHeight,
         });
 
         return () => observer.disconnect();
@@ -247,7 +249,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
 
     return (
         <div ref={containerRef} className="relative w-full h-[130vh] bg-white">
-          <div ref={stickyRef} className="sticky top-0 w-full h-screen overflow-hidden bg-white">
+          <div ref={stickyRef} className="sticky top-0 w-full h-[100svh] md:h-screen overflow-hidden bg-white">
             {/* Background decoration */}
             <motion.div 
                 className="absolute inset-0 w-full h-full bg-[#FDFBF7] overflow-hidden"
@@ -271,23 +273,23 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
             </motion.div>
 
             {/* Container */}
-            <div className="flex h-full w-full max-w-[100rem] mx-auto flex-col items-center justify-center perspective-[1000px] relative">
+            <div className="flex h-full w-full max-w-[100rem] mx-auto flex-col items-stretch md:items-center justify-start md:justify-center gap-3 md:gap-0 px-4 md:px-0 pt-[84px] pb-6 md:p-0 perspective-[1000px] relative">
 
                 {/* Top-Left Slogan Block (eexgroup style) */}
                 <motion.div 
                     initial={{ opacity: 0, y: -60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 100 }}
-                    className="absolute z-30 top-20 sm:top-28 md:top-32 left-4 sm:left-8 md:left-12 max-w-[85vw] sm:max-w-[50vw] md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-left bg-white/60 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl shadow-lg sm:shadow-none border border-white/40 sm:border-transparent"
+                    className="order-1 md:order-none relative md:absolute z-30 shrink-0 md:top-32 md:left-12 w-full md:w-auto md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-left"
                 >
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif text-navy leading-[1.15] tracking-tight">
                         Fransız Ekolünde <br/>
                         <span className="text-red-600 italic font-light">40 Yıllık</span> Deneyim.
                     </h1>
-                    <p className="mt-3 md:mt-4 text-xs sm:text-sm text-navy-100 leading-relaxed font-sans font-light">
+                    <p className="mt-2 md:mt-4 text-[12px] sm:text-sm text-navy-100 leading-snug md:leading-relaxed font-sans font-light">
                         Öğrencilerimizi sadece sınavlara değil, elit bir geleceğe hazırlıyoruz. DELF/DALF ve yurtdışı danışmanlık hizmetlerimizle ayrıcalıklı bir eğitim ekosistemi.
                     </p>
-                    <div className="mt-5 md:mt-6">
+                    <div className="mt-3 md:mt-6">
                         <Link href="/iletisim" className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 rounded-sm border border-navy text-white font-medium bg-navy hover:bg-red-600 hover:border-red-600 transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
                             Baykuş Akademi'yi Keşfet
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -300,17 +302,17 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1, type: "spring", stiffness: 100 }}
-                    className="absolute z-30 bottom-16 sm:bottom-20 md:bottom-24 right-4 sm:right-8 md:right-12 xl:right-[100px] 2xl:right-[120px] max-w-[85vw] sm:max-w-[50vw] md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-right flex flex-col items-end bg-white/60 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl shadow-lg sm:shadow-none border border-white/40 sm:border-transparent"
+                    className="order-3 md:order-none relative md:absolute z-30 shrink-0 md:bottom-24 md:right-12 xl:right-[100px] 2xl:right-[120px] w-full md:w-auto pr-[72px] md:pr-0 md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto flex flex-row md:flex-col items-center md:items-end justify-between gap-2 md:gap-0 text-left md:text-right"
                 >
-                    <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-serif text-navy leading-[1.15] tracking-tight text-right">
+                    <h2 className="text-[17px] sm:text-2xl lg:text-3xl xl:text-4xl font-serif text-navy leading-[1.15] tracking-tight text-left md:text-right">
                         Geleceğe Açılan <br/> 
                         <span className="text-red-600 italic font-light">Zarif Bir Kapı.</span>
                     </h2>
-                    <p className="mt-3 md:mt-4 text-xs sm:text-sm text-navy/80 leading-relaxed font-sans font-light text-right">
+                    <p className="hidden md:block mt-4 text-sm text-navy/80 leading-relaxed font-sans font-light text-right">
                         Hedefiniz neresi olursa olsun, Avrupa'nın en seçkin üniversitelerine giden bu prestijli yolda Baykuş Akademi hep yanınızda.
                     </p>
-                    <div className="mt-5 md:mt-6">
-                        <Link href="/dersler/fransiz-universiteleri-danismanlik" className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
+                    <div className="shrink-0 md:mt-6">
+                        <Link href="/dersler/fransiz-universiteleri-danismanlik" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 md:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
                             Danışmanlığı İncele
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>
@@ -336,7 +338,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                 </motion.div>
 
                     {/* Main Container */}
-                    <div className="relative flex items-center justify-center w-full h-full">
+                    <div ref={ringRef} className="order-2 md:order-none relative md:absolute md:inset-0 flex-1 min-h-0 flex items-center justify-center w-full md:h-full">
 
                     {/* Center Logo (Just the transparent logo) */}
                     <motion.div
@@ -350,7 +352,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                                 ? { duration: 0, ease: "linear" }
                                 : { duration: 1.5, type: "spring", stiffness: 100 }
                         }
-                        className="absolute z-10 flex flex-col items-center justify-center pointer-events-none will-change-transform"
+                        className="absolute z-10 hidden md:flex flex-col items-center justify-center pointer-events-none will-change-transform"
                         style={{
                             left: "50%",
                             top: "50%",
@@ -392,9 +394,13 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                             const isMobile = containerSize.width < 768;
                             const minDimension = Math.min(containerSize.width, containerSize.height);
 
+                            // On mobile, shrink cards and fit the whole ring (cards included) inside the free ring area
+                            const cardScale = isMobile ? Math.min(0.7, Math.max(0.35, minDimension / 560)) : 1;
+                            const cardHalfExtent = (IMG_HEIGHT / 2) * 1.2 * cardScale;
+
                             // A. Calculate Circle Position
                             // Original massive ring behavior
-                            const maxRadius = isMobile ? containerSize.width * 0.28 : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380); 
+                            const maxRadius = isMobile ? Math.max(40, minDimension / 2 - cardHalfExtent - 4) : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380); 
                             const owlScale = maxRadius / 280;
                             
                             // Keep it perfectly centered as requested
@@ -406,7 +412,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                                 x: (basePos.x * owlScale) + owlCenterX,
                                 y: (basePos.y * owlScale) + owlCenterY,
                                 rotation: basePos.rot,
-                                scale: basePos.s ? basePos.s : 1,
+                                scale: (basePos.s ? basePos.s : 1) * cardScale,
                                 opacity: 1,
                                 rotateY: 0
                             };
