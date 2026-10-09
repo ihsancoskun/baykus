@@ -32,7 +32,7 @@ const MENU_DATA = {
     { id: "fransiz-liselerine-hazirlik", title: "Fransız Liseleri Hazırlık Atlama Sınavı" },
     { id: "fransiz-liselerine-hazirlik", title: "Fransız Liselerine Doğrudan Geçiş İç Sınavı" },
     { id: "fransiz-liselerine-hazirlik", title: "Fransız Liseleri Pasaj Sınavı" },
-    { id: "kpds-hazirlik", title: "YDS" },
+    { id: "yds-hazirlik", title: "YDS" },
     { id: "kpds-hazirlik", title: "KPDS" },
   ],
   sinavlar_dil: [
