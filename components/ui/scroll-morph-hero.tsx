@@ -348,7 +348,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                         Hedefiniz neresi olursa olsun, Avrupa'nın en seçkin üniversitelerine giden bu prestijli yolda Baykuş Akademi hep yanınızda.
                     </p>
                     <div className="shrink-0 mt-2.5 mr-14 lg:mr-0 md:mt-6">
-                        <Link href="/dersler/fransiz-universiteleri-danismanlik" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 lg:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
+                        <Link href="/dersler/fransiz-universiteler-basvuru-danismanligi" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 lg:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
                             Danışmanlığı İncele
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>
@@ -389,7 +389,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                                 className="mt-4 text-xs text-[#263147]/80 font-sans font-light leading-relaxed text-center"
                                 style={{ maxWidth: Math.round(Math.min(340 * rootScale, holeDiameter * 0.8)) }}
                             >
-                                Fransızca eğitiminde sınav kazandıran sistem. Fransa Üniversiteleri yurt dışı eğitim danışmanlığı, DELF / DALF, GSÜ İç Sınav, ve Baccalauréat eğitimleri.
+                                Fransızca eğitiminde sınav kazandıran sistem. Fransa Üniversiteleri yurt dışı eğitim danışmanlığı, DELF / DALF, GSÜ İç Sınavı, ve Baccalauréat eğitimleri.
                             </p>
                         )}
                     </motion.div>

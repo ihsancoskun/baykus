@@ -9,7 +9,7 @@ const garamond = EB_Garamond({ subsets: ["latin", "latin-ext"], variable: '--fon
 
 export const metadata: Metadata = {
   title: "Baykuş Akademi | Fransız Zarafeti ile Eğitim",
-  description: "Fransız ekolünde 40 yıllık deneyim. DELF/DALF, GSÜ İç Sınav ve Yurtdışı Danışmanlık.",
+  description: "Fransız ekolünde 40 yıllık deneyim. DELF/DALF, GSÜ İç Sınavı ve Yurtdışı Danışmanlık.",
 };
 
 export default function RootLayout({

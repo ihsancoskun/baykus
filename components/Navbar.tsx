@@ -11,7 +11,7 @@ const MENU_DATA = {
   danismanlik: [
     { 
       id: "fransiz-universiteler-basvuru-danismanligi", 
-      title: "Fransız Üniversiteleri",
+      title: "Fransa'daki Üniversitelere Başvuru Danışmanlığı",
       desc: "Fransa'daki elit üniversitelere kayıt ve başvuru süreçleri yönetimi.",
       image: "/media/2025/06/fransizca-dersi-baykus.jpg"
     },
@@ -22,19 +22,24 @@ const MENU_DATA = {
       image: "/media/2025/06/biyoloji-baykus.jpg"
     }
   ],
+  // Revize 09.10.2026 s.7 — "Hazırlık Atlama" ve "Pasaj" sınavlarının henüz ayrı sayfası yok;
+  // Fransız Liseleri İç Sınavı sayfasına yönlenir. KPSS de şimdilik YDS/KPDS sayfasına gider.
   sinavlar_akademik: [
     { id: "baccalaureat", title: "Baccalauréat" },
     { id: "brevet", title: "Brevet" },
-    { id: "satfrench", title: "SAT (General & French)" },
-    { id: "gsicsinavlar", title: "GSÜ İç Sınavları" },
-    { id: "fransiz-liselerine-hazirlik", title: "Fransız Liselerine Hazırlık" },
+    { id: "satfrench", title: "SAT" },
+    { id: "gsicsinavlar", title: "GSÜ İç Sınavı" },
+    { id: "fransiz-liselerine-hazirlik", title: "Fransız Liseleri Hazırlık Atlama Sınavı" },
+    { id: "fransiz-liselerine-hazirlik", title: "Fransız Liselerine Doğrudan Geçiş İç Sınavı" },
+    { id: "fransiz-liselerine-hazirlik", title: "Fransız Liseleri Pasaj Sınavı" },
+    { id: "kpds-hazirlik", title: "YDS" },
+    { id: "kpds-hazirlik", title: "KPSS" },
   ],
   sinavlar_dil: [
     { id: "delf-dalf", title: "DELF / DALF" },
-    { id: "tcf-anf", title: "TCF ANF" },
-    { id: "toefl", title: "TOEFL iBT" },
+    { id: "tcf-anf", title: "TCF / ANF" },
+    { id: "toefl", title: "TOEFL" },
     { id: "cambridge", title: "Cambridge Check Point" },
-    { id: "kpds-hazirlik", title: "YDS / KPDS" },
   ],
   branslar_fr: [
     { id: "fransizca-matematik-dersleri", title: "Matematik" },
@@ -89,7 +94,7 @@ export default function Navbar({ className }: { className?: string }) {
   const mobileSections: { key: string; title: string; groups: { label?: string; items: { id: string; title: string }[] }[] }[] = [
     { key: "danismanlik", title: "Danışmanlık", groups: [{ items: MENU_DATA.danismanlik }] },
     { key: "sinavlar", title: "Sınavlar", groups: [
-      { label: "Akademik & Lise", items: MENU_DATA.sinavlar_akademik },
+      { label: "Akademik Sınavlar", items: MENU_DATA.sinavlar_akademik },
       { label: "Uluslararası Dil", items: MENU_DATA.sinavlar_dil },
     ] },
     { key: "okul", title: "Okul Destek", groups: [
@@ -144,7 +149,7 @@ export default function Navbar({ className }: { className?: string }) {
               <div className="text-sm grid grid-cols-1 gap-6 p-4 min-w-[350px] bg-[#FDFBF7]">
                 {MENU_DATA.danismanlik.map((item) => (
                   <ProductItem
-                    key={item.id}
+                    key={item.title}
                     title={item.title}
                     href={`/dersler/${item.id}`}
                     src={item.image}
@@ -158,10 +163,10 @@ export default function Navbar({ className }: { className?: string }) {
               <div className="grid grid-cols-2 gap-10 text-sm min-w-[550px] p-4 bg-[#FDFBF7]">
                 {/* Akademik Sınavlar */}
                 <div>
-                  <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Akademik & Lise</h4>
+                  <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Akademik Sınavlar</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.sinavlar_akademik.map((item) => (
-                      <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
+                      <HoveredLink key={item.title} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
                     ))}
                   </div>
                 </div>
@@ -170,7 +175,7 @@ export default function Navbar({ className }: { className?: string }) {
                   <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Uluslararası Dil</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.sinavlar_dil.map((item) => (
-                      <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
+                      <HoveredLink key={item.title} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
                     ))}
                   </div>
                 </div>
@@ -184,7 +189,7 @@ export default function Navbar({ className }: { className?: string }) {
                   <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Fransızca Müfredat</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.branslar_fr.map((item) => (
-                      <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
+                      <HoveredLink key={item.title} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
                     ))}
                   </div>
                 </div>
@@ -193,7 +198,7 @@ export default function Navbar({ className }: { className?: string }) {
                   <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">İngilizce Müfredat</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.branslar_en.map((item) => (
-                      <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
+                      <HoveredLink key={item.title} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
                     ))}
                   </div>
                 </div>
@@ -203,7 +208,7 @@ export default function Navbar({ className }: { className?: string }) {
             <MenuItem setActive={setActive} active={active} item="YABANCI DİL">
               <div className="flex flex-col space-y-3 text-sm min-w-[200px] p-4 bg-[#FDFBF7]">
                 {MENU_DATA.diller.map((item) => (
-                  <HoveredLink key={item.id} href={`/dersler/${item.id}`}>
+                  <HoveredLink key={item.title} href={`/dersler/${item.id}`}>
                     {item.title}
                   </HoveredLink>
                 ))}
@@ -290,7 +295,7 @@ export default function Navbar({ className }: { className?: string }) {
                               <div className="flex flex-col">
                                 {group.items.map((item) => (
                                   <Link
-                                    key={item.id}
+                                    key={item.title}
                                     href={`/dersler/${item.id}`}
                                     onClick={() => setMobileOpen(false)}
                                     className="py-2 text-[0.9375rem] font-sans text-[#263147]/80 hover:text-[#b3855a]"

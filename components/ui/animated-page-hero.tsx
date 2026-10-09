@@ -6,9 +6,10 @@ import { motion } from "framer-motion";
 interface AnimatedPageHeroProps {
   title: string;
   bgImage: string;
+  subtitle?: string;
 }
 
-export function AnimatedPageHero({ title, bgImage }: AnimatedPageHeroProps) {
+export function AnimatedPageHero({ title, bgImage, subtitle }: AnimatedPageHeroProps) {
   return (
     <section className="relative w-full h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
       {/* Background Image with falling animation */}
@@ -34,7 +35,7 @@ export function AnimatedPageHero({ title, bgImage }: AnimatedPageHeroProps) {
         </h1>
         <div className="w-16 h-[1px] bg-red-600 mx-auto mb-8"></div>
         <p className="text-lg md:text-xl text-white/80 font-sans font-light max-w-2xl mx-auto">
-          Baykuş Akademi'nin vizyonuyla hedeflerinize emin adımlarla ilerleyin.
+          {subtitle || "Baykuş Akademi'nin vizyonuyla hedeflerinize emin adımlarla ilerleyin."}
         </p>
       </motion.div>
     </section>

@@ -30,7 +30,7 @@ const services = [
   {
     step: "02",
     title: "Uluslararası Eğitim Danışmanlığı",
-    desc: "Fransa, Belçika ve İsviçre'nin prestijli üniversitelerine giden yolda (Campus France, Parcoursup); uçtan uca stratejik rehberlik ve etkileyici portfolyo tasarımı.",
+    desc: "Fransa, Belçika ve İsviçre'nin prestijli üniversitelerine giden yolda (Campus France, Parcoursup ve diğer platformlar); uçtan uca stratejik rehberlik ve etkileyici portfolyo tasarımı.",
   },
   {
     step: "03",

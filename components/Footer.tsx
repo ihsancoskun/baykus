@@ -182,7 +182,7 @@ export default function Footer() {
       links: [
         { label: "Fransa'daki Üniversitelere Başvuru", href: "/dersler/fransiz-universiteler-basvuru-danismanligi" },
         { label: "Frankofon Okulların Tüm Branşları", href: "/dersler/fransizca-matematik-dersleri" },
-        { label: "Galatasaray Üniversitesi İç Sınavlar", href: "/dersler/gsicsinavlar" },
+        { label: "Galatasaray Üniversitesi İç Sınavı", href: "/dersler/gsicsinavlar" },
         { label: "Atölyelerle Fransızca", href: "/iletisim" },
         { label: "Oyunlarla Fransızca", href: "/iletisim" },
         { label: "Mesleki Fransızca", href: "/iletisim" },
@@ -205,7 +205,8 @@ export default function Footer() {
         { label: "BREVET", href: "/dersler/brevet" },
         { label: "BACCALAUREAT", href: "/dersler/baccalaureat" },
         { label: "DELF, DALF", href: "/dersler/delf-dalf" },
-        { label: "GSÜ İÇ SINAVLAR", href: "/dersler/gsicsinavlar" },
+        { label: "FRANSIZ LİSELERİ İÇ SINAVI", href: "/dersler/fransiz-liselerine-hazirlik" },
+        { label: "GSÜ İÇ SINAVI", href: "/dersler/gsicsinavlar" },
         { label: "SAT FRENCH", href: "/dersler/satfrench" },
         { label: "TOEFL, SAT", href: "/dersler/toefl" },
         { label: "CHECK POINT", href: "/dersler/cambridge" },
@@ -216,8 +217,8 @@ export default function Footer() {
   const contactInfo = [
     {
       icon: <Mail size={18} className="text-[#b3855a] group-hover:text-white transition-colors mt-1" />,
-      text: "baykusakademi@gmail.com",
-      href: "mailto:baykusakademi@gmail.com",
+      text: "baykusakademisi@gmail.com",
+      href: "mailto:baykusakademisi@gmail.com",
     },
     {
       icon: <Phone size={18} className="text-[#b3855a] group-hover:text-white transition-colors mt-1" />,

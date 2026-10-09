@@ -50,7 +50,7 @@ const statCards = [
   },
   {
     value: `${SUCCESS_DATA.gsuInternalExamRate}`,
-    label: "GSÜ İç Sınavlarında Zirve",
+    label: "GSÜ İç Sınavında Zirve",
     sub: "Galatasaray Üniversitesi'ne geçişte eşsiz oran",
   },
   {

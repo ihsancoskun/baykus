@@ -45,13 +45,13 @@ export default function ContactPage() {
       title: "Telefon",
       details: "0 533 656 99 83",
       href: "tel:+905336569983",
-      description: "Hafta içi 09:00 - 18:00 arası arayabilirsiniz."
+      description: "Hafta içi 09:00 - 19:00 arası arayabilirsiniz."
     },
     {
       icon: <Mail className="w-6 h-6 text-red-500" />,
       title: "E-posta",
-      details: "baykusakademi@gmail.com",
-      href: "mailto:baykusakademi@gmail.com",
+      details: "baykusakademisi@gmail.com",
+      href: "mailto:baykusakademisi@gmail.com",
       description: "Sorularınız için 7/24 e-posta gönderebilirsiniz."
     },
     {
@@ -181,7 +181,7 @@ export default function ContactPage() {
                       >
                         <option value="" disabled>Lütfen seçiniz</option>
                         <option value="delf_dalf">DELF / DALF Sınav Hazırlığı</option>
-                        <option value="gsu">GSÜ İç Sınav Hazırlığı</option>
+                        <option value="gsu">GSÜ İç Sınavı Hazırlığı</option>
                         <option value="lise">Fransız Liselerine Geçiş</option>
                         <option value="universite">Fransa Üniversite Danışmanlığı</option>
                         <option value="diger">Diğer</option>
