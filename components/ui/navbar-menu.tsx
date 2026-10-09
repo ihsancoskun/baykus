@@ -101,7 +101,7 @@ export const ProductItem = ({
         <h4 className="text-[0.8125rem] font-medium mb-1 text-[#263147] group-hover:text-[#b3855a] transition-colors">
           {title}
         </h4>
-        <p className="text-[#263147]/70 text-[0.6875rem] max-w-[14rem] line-clamp-2 leading-relaxed">
+        <p className="text-[#263147]/70 text-[0.6875rem] leading-relaxed">
           {description}
         </p>
       </div>

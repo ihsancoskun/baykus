@@ -146,7 +146,7 @@ export default function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/">ANASAYFA</HoveredLink>
 
             <MenuItem setActive={setActive} active={active} item="DANIŞMANLIK">
-              <div className="text-sm grid grid-cols-1 gap-6 p-4 min-w-[350px] bg-[#FDFBF7]">
+              <div className="text-sm grid grid-cols-1 gap-6 p-4 min-w-[400px] bg-[#FDFBF7]">
                 {MENU_DATA.danismanlik.map((item) => (
                   <ProductItem
                     key={item.title}
