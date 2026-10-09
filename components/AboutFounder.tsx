@@ -41,7 +41,7 @@ export default function AboutFounder() {
             {/* Experience Badge */}
             <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-navy text-white p-4 md:p-6 rounded-none border border-navy/20 shadow-xl flex flex-col items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
               <span className="text-3xl md:text-4xl font-serif font-bold text-white">40+</span>
-              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] mt-1 md:mt-2 opacity-80">Yıllık Tecrübe</span>
+              <span className="text-[0.5625rem] md:text-[0.625rem] uppercase tracking-[0.2em] mt-1 md:mt-2 opacity-80">Yıllık Tecrübe</span>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ export default function AboutFounder() {
               Eğitim Direktörü
             </p>
             
-            <div className="space-y-4 md:space-y-6 text-navy-100 text-[15px] md:text-lg leading-relaxed">
+            <div className="space-y-4 md:space-y-6 text-navy-100 text-[0.9375rem] md:text-lg leading-relaxed">
               <p>
                 Eğitime adanmış 40 yıllık benzersiz bir serüven... Baykuş Akademi'nin kurucusu Elif Akan, 
                 derin pedagojik bilgi birikimi ve ilham veren vizyonuyla bugüne dek binlerce öğrencinin hayatına dokunmuş; 

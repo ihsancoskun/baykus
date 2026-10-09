@@ -8,6 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // NOTE: do not add `raw`/max-width screens here — Tailwind then disables all `min-[...]` variants
+      // (the navbar relies on `min-[860px]`). Use `[@media(min-height:...)]:` arbitrary variants instead.
       fontFamily: {
         sans: ['var(--font-garamond)', 'serif'],
         serif: ['var(--font-garamond)', 'serif'],

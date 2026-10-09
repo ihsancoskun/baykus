@@ -27,7 +27,7 @@ export default function VideoShowcase() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 flex items-center justify-center gap-4 text-[10px] font-sans font-semibold tracking-[0.3em] text-white/50 uppercase"
+            className="mb-6 flex items-center justify-center gap-4 text-[0.625rem] font-sans font-semibold tracking-[0.3em] text-white/50 uppercase"
           >
             <span className="w-8 h-[1px] bg-white/20"></span>
             İLHAM VEREN YOLCULUKLAR

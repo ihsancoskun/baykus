@@ -27,14 +27,14 @@ export default function VizyonNeo() {
             <div className="w-12 h-12 bg-gradient-to-br from-[#c85a3c] to-[#263147] rounded-full border border-[#263147]/20 flex items-center justify-center">
                <span className="text-white font-serif font-bold text-xl">B</span>
             </div>
-            <div className="flex flex-col text-[#263147] font-sans text-[10px] tracking-[0.25em] uppercase font-bold leading-[1.1]">
+            <div className="flex flex-col text-[#263147] font-sans text-[0.625rem] tracking-[0.25em] uppercase font-bold leading-[1.1]">
               <span>BAYKUŞ</span>
               <span>AKADEMİ</span>
             </div>
           </div>
 
           {/* Navigation Middle */}
-          <nav className="hidden md:flex gap-12 font-sans text-[10px] tracking-[0.25em] text-[#263147]/80 uppercase font-semibold mt-3">
+          <nav className="hidden md:flex gap-12 font-sans text-[0.625rem] tracking-[0.25em] text-[#263147]/80 uppercase font-semibold mt-3">
             <span className="text-[#263147] flex flex-col items-center">
               EĞİTİMLER <span className="w-1 h-1 bg-[#263147] rounded-full mt-2"></span>
             </span>
@@ -46,7 +46,7 @@ export default function VizyonNeo() {
 
           {/* Button Right */}
           <div className="flex items-center gap-4 mt-1">
-            <button className="bg-[#b3855a] hover:bg-[#8b6540] transition-colors text-white font-sans text-[10px] tracking-[0.2em] px-8 py-3.5 font-semibold uppercase">
+            <button className="bg-[#b3855a] hover:bg-[#8b6540] transition-colors text-white font-sans text-[0.625rem] tracking-[0.2em] px-8 py-3.5 font-semibold uppercase">
               Başvur
             </button>
             <div className="w-10 h-10 border border-[#263147]/30 flex items-center justify-center rounded-full cursor-pointer hover:border-[#263147] transition-colors">
@@ -57,7 +57,7 @@ export default function VizyonNeo() {
 
         {/* Central Content */}
         <div className="flex-1 flex flex-col justify-center mt-12 md:mt-24 max-w-4xl px-4 md:px-12">
-          <h1 className="font-serif font-light text-6xl md:text-8xl lg:text-[130px] text-[#263147] leading-[0.85] tracking-tight">
+          <h1 className="font-serif font-light text-6xl md:text-8xl lg:text-[8.125rem] text-[#263147] leading-[0.85] tracking-tight">
             BAYKUŞ <br />
             AKADEMİ <br />
             L'ÉCOLE DU FUTUR
@@ -78,15 +78,15 @@ export default function VizyonNeo() {
           {/* Bottom Left: Stamp & Date */}
           <div className="flex flex-col gap-6">
             {/* Hanko Stamp replacement (Red Wax style) */}
-            <div className="w-10 h-10 bg-transparent border-[1.5px] border-[#c85a3c] flex items-center justify-center text-[#c85a3c] font-serif text-[9px] leading-tight text-center">
+            <div className="w-10 h-10 bg-transparent border-[1.5px] border-[#c85a3c] flex items-center justify-center text-[#c85a3c] font-serif text-[0.5625rem] leading-tight text-center">
               BA<br/>1984
             </div>
             
-            <div className="font-sans text-[10px] text-[#263147] tracking-[0.1em] uppercase font-semibold flex flex-col gap-1.5">
+            <div className="font-sans text-[0.625rem] text-[#263147] tracking-[0.1em] uppercase font-semibold flex flex-col gap-1.5">
               <span>Eylül 2024 — Haziran 2025</span>
               <div className="flex items-center gap-2">
                 <span>NİŞANTAŞI KAMPÜSÜ</span>
-                <span className="w-4 h-4 rounded-full border border-[#263147] flex items-center justify-center text-[10px]">→</span>
+                <span className="w-4 h-4 rounded-full border border-[#263147] flex items-center justify-center text-[0.625rem]">→</span>
               </div>
             </div>
           </div>

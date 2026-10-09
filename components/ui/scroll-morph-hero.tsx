@@ -91,11 +91,11 @@ function FlipCard({
                             <img src={PROGRAMS[index].img} alt="bg" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
                             <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/90 to-navy/10" />
                             <div className="absolute inset-0 flex flex-col items-center justify-end p-1.5 pb-2 text-center">
-                                <h3 className="text-[10px] font-serif font-bold text-white mb-1 leading-tight">{PROGRAMS[index].title}</h3>
+                                <h3 className="text-[0.625rem] font-serif font-bold text-white mb-1 leading-tight">{PROGRAMS[index].title}</h3>
                                 <div className="w-6 h-[1px] bg-red-600/50 mb-2 rounded-full" />
-                                <p className="text-[8px] font-sans font-light text-gray-300 leading-snug mb-2 px-1 line-clamp-3">{PROGRAMS[index].desc}</p>
+                                <p className="text-[0.5rem] font-sans font-light text-gray-300 leading-snug mb-2 px-1 line-clamp-3">{PROGRAMS[index].desc}</p>
                                 <div className="mt-2 flex items-center justify-center w-full px-2">
-                                    <span className="inline-block w-full text-center bg-navy border border-white/50 text-white text-[8px] py-1 rounded hover:bg-red-600 transition-colors">
+                                    <span className="inline-block w-full text-center bg-navy border border-white/50 text-white text-[0.5rem] py-1 rounded hover:bg-red-600 transition-colors">
                                         İncele
                                     </span>
                                 </div>
@@ -138,34 +138,35 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
     export default function IntroAnimation() {
     const [introPhase, setIntroPhase] = useState<AnimationPhase>("scatter");
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+    const [isDesktop, setIsDesktop] = useState(false);
+    // 1 by default; follows the root font-size if the visitor enlarges browser text
+    const [rootScale, setRootScale] = useState(1);
     const containerRef = useRef<HTMLDivElement>(null);
     const stickyRef = useRef<HTMLDivElement>(null);
     const ringRef = useRef<HTMLDivElement>(null);
 
-    // --- Container Size (measured on the ring area so mobile can size the ring to the free space) ---
+    // --- Ring cell size: the ring is always sized from the free space of its own cell,
+    // so it can never collide with the text blocks at any resolution ---
     useEffect(() => {
         const el = ringRef.current;
         if (!el) return;
 
-        const handleResize = (entries: ResizeObserverEntry[]) => {
-            for (const entry of entries) {
-                setContainerSize({
-                    width: entry.contentRect.width,
-                    height: entry.contentRect.height,
-                });
-            }
+        const desktopQuery = window.matchMedia("(min-width: 1024px)");
+        const measure = () => {
+            setIsDesktop(desktopQuery.matches);
+            setRootScale((parseFloat(getComputedStyle(document.documentElement).fontSize) || 16) / 16);
+            setContainerSize({ width: el.offsetWidth, height: el.offsetHeight });
         };
 
-        const observer = new ResizeObserver(handleResize);
+        const observer = new ResizeObserver(measure);
         observer.observe(el);
+        desktopQuery.addEventListener("change", measure);
+        measure();
 
-        // Initial set
-        setContainerSize({
-            width: el.offsetWidth,
-            height: el.offsetHeight,
-        });
-
-        return () => observer.disconnect();
+        return () => {
+            observer.disconnect();
+            desktopQuery.removeEventListener("change", measure);
+        };
     }, []);
 
     // --- Native Scroll Logic ---
@@ -247,16 +248,17 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
         };
     }, [smoothMorph, smoothScrollRotate, smoothGrid, smoothMouseX]);
 
-    // --- Ring geometry (shared by cards and the center portrait) ---
-    const isMobile = containerSize.width < 768;
+    // --- Ring geometry (shared by cards and the center logo) ---
+    // The whole ring (radius + card length) must fit inside the measured cell.
     const minDimension = Math.min(containerSize.width, containerSize.height);
-    // Mobile: thinner cards so the center hole keeps the same proportions as desktop
-    const cardScale = isMobile ? Math.min(0.55, Math.max(0.3, minDimension / 900)) : 1;
+    const cardScale = isDesktop
+        ? Math.min(rootScale, Math.max(0.5, minDimension / 720))
+        : Math.min(0.55, Math.max(0.3, minDimension / 900)); // stacked: thinner cards keep the hole proportional
     const cardHalfExtent = (IMG_HEIGHT / 2) * 1.2 * cardScale;
-    const maxRadius = isMobile
-        ? Math.max(40, minDimension / 2 - cardHalfExtent - 4)
-        : Math.min(containerSize.width * 0.23, containerSize.height * 0.35, 380);
+    const maxRadius = Math.max(40, Math.min(380 * rootScale, minDimension / 2 - cardHalfExtent - 4));
     const holeDiameter = Math.max(0, (maxRadius - cardHalfExtent) * 2);
+    const logoWidth = Math.round(Math.min(380 * rootScale, holeDiameter * 0.74));
+    const showCenterCopy = isDesktop && holeDiameter >= 360 * rootScale;
 
     return (
         <div ref={containerRef} className="relative w-full h-[130vh] bg-white">
@@ -283,21 +285,44 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                 </motion.div>
             </motion.div>
 
-            {/* Container */}
-            <div className="flex h-full w-full max-w-[100rem] mx-auto flex-col items-stretch md:items-center justify-start md:justify-center gap-2 md:gap-0 px-4 md:px-0 pt-[68px] pb-4 md:p-0 perspective-[1000px] relative">
+            {/* RIGHT FLOATING PILLAR (Bookmark) — only rendered where the grid reserves room for it (xl + tall) */}
+            <motion.div 
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 1.2, type: "spring", stiffness: 100 }}
+                style={{ y: "-50%" }}
+                className="absolute hidden xl:[@media(min-height:700px)]:flex right-0 top-1/2 max-h-[calc(100%-7rem)] overflow-hidden w-24 bg-[#EAE2D6] border-y border-l border-[#263147]/20 py-6 flex-col items-center gap-8 shadow-[-20px_0_40px_rgba(0,0,0,0.05)] pointer-events-auto z-40 rounded-l-2xl"
+            >
+                <div className="w-14 h-14 shrink-0 bg-[#263147] rounded-full flex items-center justify-center relative">
+                    <div className="w-9 h-9 border-t-[1px] border-r-[1px] border-[#EAE2D6] rounded-tr-full absolute top-1.5 right-1.5"></div>
+                    <div className="w-9 h-9 border-b-[1px] border-l-[1px] border-[#EAE2D6] rounded-bl-full absolute bottom-1.5 left-1.5"></div>
+                </div>
+                
+                <div className="flex flex-row-reverse gap-3 font-serif text-[#263147] tracking-[0.3em] whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>
+                    <span className="text-lg font-light uppercase">Baykuş Akademi</span>
+                    <span className="text-xs opacity-70 uppercase">Fransızca Eğitim Mükemmeliyeti</span>
+                </div>
+            </motion.div>
 
-                {/* Top-Left Slogan Block (eexgroup style) */}
+            {/* Layout: stacked column below 1024px, 3-column grid (text | ring | text) above.
+                Every block lives in its own track, so nothing can overlap at any resolution. */}
+            <div
+                className="relative flex h-full w-full flex-col items-stretch justify-start gap-2 px-4 pt-[68px] pb-4 perspective-[1000px] lg:grid lg:grid-cols-[minmax(0,1fr)_var(--ring)_minmax(0,1fr)] lg:grid-rows-[minmax(0,1fr)] lg:gap-[clamp(1rem,2.5vw,3rem)] lg:px-[clamp(2rem,4vw,5rem)] lg:py-0 xl:[@media(min-height:700px)]:pr-[8.5rem]"
+                style={{ ["--ring" as string]: "min(calc(100svh - 9rem), 42vw, 53.75rem)" } as React.CSSProperties}
+            >
+
+                {/* Top-Left Slogan Block */}
                 <motion.div 
                     initial={{ opacity: 0, y: -60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 100 }}
-                    className="order-1 md:order-none relative md:absolute z-30 shrink-0 md:top-32 md:left-12 w-full md:w-auto md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto text-left"
+                    className="order-1 lg:order-none lg:col-start-1 lg:row-start-1 lg:self-start lg:pt-[clamp(6.5rem,16svh,10rem)] relative z-30 shrink-0 w-full lg:max-w-[26rem] pointer-events-auto text-left"
                 >
-                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif text-navy leading-[1.15] tracking-tight">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[clamp(1.5rem,0.4rem+min(1.9vw,3.4svh),3.25rem)] font-serif text-navy leading-[1.12] tracking-tight">
                         Fransız Ekolünde <br/>
                         <span className="text-red-600 italic font-light">40 Yıllık</span> Deneyim.
                     </h1>
-                    <p className="mt-2 md:mt-4 text-[12px] sm:text-sm text-navy-100 leading-snug md:leading-relaxed font-sans font-light">
+                    <p className="mt-2 md:mt-4 text-[0.75rem] sm:text-sm xl:text-base text-navy-100 leading-snug md:leading-relaxed font-sans font-light">
                         Öğrencilerimizi sadece sınavlara değil, elit bir geleceğe hazırlıyoruz. DELF/DALF ve yurtdışı danışmanlık hizmetlerimizle ayrıcalıklı bir eğitim ekosistemi.
                     </p>
                     <div className="mt-3 md:mt-6">
@@ -308,48 +333,30 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                     </div>
                 </motion.div>
 
-                {/* Bottom-Right Secondary Slogan */}
+                {/* Bottom-Right Secondary Slogan (bottom padding keeps it clear of the floating WhatsApp button) */}
                 <motion.div 
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1, type: "spring", stiffness: 100 }}
-                    className="order-3 md:order-none relative md:absolute z-30 shrink-0 md:bottom-24 md:right-12 xl:right-[100px] 2xl:right-[120px] w-full md:w-auto md:max-w-[40vw] lg:max-w-[28vw] xl:max-w-[22vw] pointer-events-auto flex flex-col items-end text-right"
+                    className="order-3 lg:order-none lg:col-start-3 lg:row-start-1 lg:self-end lg:justify-self-end lg:pb-[clamp(7.5rem,15svh,9rem)] relative z-30 shrink-0 w-full lg:max-w-[26rem] pointer-events-auto flex flex-col items-end text-right"
                 >
-                    <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-serif text-navy leading-[1.15] tracking-tight text-right">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[clamp(1.25rem,0.3rem+min(1.6vw,2.9svh),2.75rem)] font-serif text-navy leading-[1.12] tracking-tight text-right">
                         Geleceğe Açılan <br/> 
                         <span className="text-red-600 italic font-light">Zarif Bir Kapı.</span>
                     </h2>
-                    <p className="mt-1.5 md:mt-4 text-[12px] md:text-sm text-navy/80 leading-snug md:leading-relaxed font-sans font-light text-right">
+                    <p className="mt-1.5 md:mt-4 text-[0.75rem] md:text-sm xl:text-base text-navy/80 leading-snug md:leading-relaxed font-sans font-light text-right">
                         Hedefiniz neresi olursa olsun, Avrupa'nın en seçkin üniversitelerine giden bu prestijli yolda Baykuş Akademi hep yanınızda.
                     </p>
-                    <div className="shrink-0 mt-2.5 mr-14 md:mr-0 md:mt-6">
-                        <Link href="/dersler/fransiz-universiteleri-danismanlik" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 md:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
+                    <div className="shrink-0 mt-2.5 mr-14 lg:mr-0 md:mt-6">
+                        <Link href="/dersler/fransiz-universiteleri-danismanlik" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 lg:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
                             Danışmanlığı İncele
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>
                     </div>
                 </motion.div>
 
-                {/* RIGHT FLOATING PILLAR (Bookmark) */}
-                <motion.div 
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 1.2, type: "spring", stiffness: 100 }}
-                    className="absolute hidden xl:flex right-0 top-1/2 -translate-y-1/2 bg-[#EAE2D6] border-y border-l border-[#263147]/20 p-6 flex-col items-center gap-8 shadow-[-20px_0_40px_rgba(0,0,0,0.05)] pointer-events-auto z-40 rounded-l-2xl scale-[0.85] 2xl:scale-100 origin-right"
-                >
-                    <div className="w-16 h-16 bg-[#263147] rounded-full flex items-center justify-center relative">
-                        <div className="w-10 h-10 border-t-[1px] border-r-[1px] border-[#EAE2D6] rounded-tr-full absolute top-1.5 right-1.5"></div>
-                        <div className="w-10 h-10 border-b-[1px] border-l-[1px] border-[#EAE2D6] rounded-bl-full absolute bottom-1.5 left-1.5"></div>
-                    </div>
-                    
-                    <div className="flex flex-row-reverse gap-4 font-serif text-[#263147] tracking-[0.3em] pb-4" style={{ writingMode: 'vertical-rl' }}>
-                        <span className="text-lg font-light uppercase">Baykuş Akademi</span>
-                        <span className="text-xs opacity-70 uppercase">Fransızca Eğitim Mükemmeliyeti</span>
-                    </div>
-                </motion.div>
-
-                    {/* Main Container */}
-                    <div ref={ringRef} className="order-2 md:order-none relative md:absolute md:inset-0 flex-1 min-h-0 flex items-center justify-center w-full md:h-full">
+                    {/* Ring cell: middle grid track on desktop, flexible middle row when stacked */}
+                    <div ref={ringRef} className="order-2 lg:order-none lg:col-start-2 lg:row-start-1 relative flex-1 min-h-0 flex items-center justify-center w-full lg:h-full">
 
                     {/* Center Logo (Just the transparent logo) */}
                     <motion.div
@@ -374,12 +381,17 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                         <img 
                             src="/media/2025/05/baykus-yatay-01.png" 
                             alt="Baykuş Akademi" 
-                            className="md:w-[300px] lg:w-[340px] xl:w-[380px] object-contain drop-shadow-2xl"
-                            style={isMobile ? { width: Math.round(holeDiameter * 0.74) } : undefined}
+                            className="object-contain drop-shadow-2xl"
+                            style={{ width: logoWidth }}
                         />
-                        <p className="hidden md:block mt-4 text-[9px] sm:text-[10px] md:text-xs text-[#263147]/80 font-sans font-light leading-relaxed max-w-[200px] sm:max-w-[280px] md:max-w-[340px] text-center">
-                            Fransızca eğitiminde sınav kazandıran sistem. Fransa Üniversiteleri yurt dışı eğitim danışmanlığı, DELF / DALF, GSÜ İç Sınav, ve Baccalauréat eğitimleri.
-                        </p>
+                        {showCenterCopy && (
+                            <p
+                                className="mt-4 text-xs text-[#263147]/80 font-sans font-light leading-relaxed text-center"
+                                style={{ maxWidth: Math.round(Math.min(340 * rootScale, holeDiameter * 0.8)) }}
+                            >
+                                Fransızca eğitiminde sınav kazandıran sistem. Fransa Üniversiteleri yurt dışı eğitim danışmanlığı, DELF / DALF, GSÜ İç Sınav, ve Baccalauréat eğitimleri.
+                            </p>
+                        )}
                     </motion.div>
 
                     {/* The Rotating Cards Ring Container */}

@@ -22,7 +22,7 @@ export default function VisionBanner() {
 
         {/* Central Content */}
         <div className="flex-1 flex flex-col justify-center max-w-4xl px-4 md:px-12">
-          <h1 className="font-serif font-light text-6xl md:text-8xl lg:text-[130px] text-[#263147] leading-[0.85] tracking-tight">
+          <h1 className="font-serif font-light text-6xl md:text-8xl lg:text-[8.125rem] text-[#263147] leading-[0.85] tracking-tight">
             BAYKUŞ <br />
             AKADEMİ <br />
             L'ÉCOLE DU FUTUR
@@ -38,7 +38,7 @@ export default function VisionBanner() {
           </p>
           
           <div className="mt-12 pointer-events-auto">
-             <button className="bg-[#b3855a] hover:bg-[#8b6540] transition-colors text-white font-sans text-[10px] tracking-[0.2em] px-10 py-4 font-semibold uppercase shadow-xl">
+             <button className="bg-[#b3855a] hover:bg-[#8b6540] transition-colors text-white font-sans text-[0.625rem] tracking-[0.2em] px-10 py-4 font-semibold uppercase shadow-xl">
               Geleceği Tasarla
             </button>
           </div>
@@ -48,15 +48,15 @@ export default function VisionBanner() {
         <div className="mt-auto flex justify-between items-end w-full px-4 md:px-12 pb-4">
           {/* Bottom Left: Stamp & Date */}
           <div className="flex flex-col gap-6">
-            <div className="w-10 h-10 bg-transparent border-[1.5px] border-[#c85a3c] flex items-center justify-center text-[#c85a3c] font-serif text-[9px] leading-tight text-center">
+            <div className="w-10 h-10 bg-transparent border-[1.5px] border-[#c85a3c] flex items-center justify-center text-[#c85a3c] font-serif text-[0.5625rem] leading-tight text-center">
               BA<br/>1984
             </div>
             
-            <div className="font-sans text-[10px] text-[#263147] tracking-[0.1em] uppercase font-semibold flex flex-col gap-1.5">
+            <div className="font-sans text-[0.625rem] text-[#263147] tracking-[0.1em] uppercase font-semibold flex flex-col gap-1.5">
               <span>Eğitimde 40 Yıllık Mükemmeliyet</span>
               <div className="flex items-center gap-2">
                 <span>GELECEĞİN VİZYONU</span>
-                <span className="w-4 h-4 rounded-full border border-[#263147] flex items-center justify-center text-[10px]">→</span>
+                <span className="w-4 h-4 rounded-full border border-[#263147] flex items-center justify-center text-[0.625rem]">→</span>
               </div>
             </div>
           </div>

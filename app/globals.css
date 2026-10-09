@@ -3,8 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  /* Responsive safety nets: no stray element can create sideways scroll at any width.
+     `clip` (not `hidden`) keeps position: sticky working. */
+  html, body {
+    overflow-x: clip;
+  }
   body {
     @apply bg-cream text-navy min-h-screen selection:bg-gold selection:text-navy antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  h1, h2, h3, h4 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+  p, li {
+    overflow-wrap: break-word;
+  }
+  img, video, iframe, svg {
+    max-width: 100%;
   }
 }
 

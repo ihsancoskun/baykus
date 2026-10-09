@@ -176,7 +176,7 @@ export default function HeroTunnel() {
                         transition={{ delay: 0.8, duration: 1 }}
                         className="mt-16 flex flex-col items-center"
                     >
-                        <p className="text-white/40 text-[10px] tracking-widest uppercase mb-4">Kaydırmaya Başlayın</p>
+                        <p className="text-white/40 text-[0.625rem] tracking-widest uppercase mb-4">Kaydırmaya Başlayın</p>
                         <div className="w-[1px] h-16 bg-gradient-to-b from-white/30 to-transparent"></div>
                     </motion.div>
                 </motion.div>

@@ -48,12 +48,12 @@ export default function Services() {
   return (
     <section className="w-full bg-[#fcfcfc] border-y border-gray-100 px-4 py-16 md:px-8 md:py-32 overflow-hidden">
       <div className="mx-auto mb-10 max-w-2xl text-center md:mb-24">
-        <span className="mb-4 md:mb-6 flex items-center justify-center gap-4 text-[10px] font-sans font-semibold tracking-[0.3em] text-red-600 uppercase">
+        <span className="mb-4 md:mb-6 flex items-center justify-center gap-4 text-[0.625rem] font-sans font-semibold tracking-[0.3em] text-red-600 uppercase">
           <span className="w-8 h-[1px] bg-red-600/40"></span>
           Akademik Danışmanlık ve Eğitim
           <span className="w-8 h-[1px] bg-red-600/40"></span>
         </span>
-        <h2 className="text-[28px] md:text-5xl font-serif font-semibold text-navy leading-tight">
+        <h2 className="text-[1.75rem] md:text-5xl font-serif font-semibold text-navy leading-tight">
           Hedeflerinize Giden Yolda <br className="hidden md:block"/>
           <span className="italic font-light">Eksiksiz ve Prestijli Rehberiniz</span>
         </h2>

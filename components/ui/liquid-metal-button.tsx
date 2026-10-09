@@ -40,7 +40,7 @@ export function LiquidMetalButton({
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </span>
       ) : (
-        <span className="relative z-10 flex items-center gap-2 text-[11px] font-sans font-semibold tracking-[0.25em] uppercase group-hover:text-white transition-colors duration-500">
+        <span className="relative z-10 flex items-center gap-2 text-[0.6875rem] font-sans font-semibold tracking-[0.25em] uppercase group-hover:text-white transition-colors duration-500">
           {label}
         </span>
       )}

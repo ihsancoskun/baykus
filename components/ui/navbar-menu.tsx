@@ -28,7 +28,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-[#263147] hover:text-[#b3855a] transition-colors font-sans text-[11px] tracking-[0.15em] font-medium"
+        className="cursor-pointer text-[#263147] hover:text-[#b3855a] transition-colors font-sans text-[0.6875rem] tracking-[0.15em] font-medium"
       >
         {item}
       </motion.p>
@@ -70,7 +70,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative flex justify-center items-center space-x-8 px-4 py-2"
+      className="relative flex justify-center items-center gap-x-3 lg:gap-x-5 xl:gap-x-8 px-2 xl:px-4 py-2 whitespace-nowrap"
     >
       {children}
     </nav>
@@ -98,10 +98,10 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-sm shadow-sm object-cover"
       />
       <div>
-        <h4 className="text-[13px] font-medium mb-1 text-[#263147] group-hover:text-[#b3855a] transition-colors">
+        <h4 className="text-[0.8125rem] font-medium mb-1 text-[#263147] group-hover:text-[#b3855a] transition-colors">
           {title}
         </h4>
-        <p className="text-[#263147]/70 text-[11px] max-w-[14rem] line-clamp-2 leading-relaxed">
+        <p className="text-[#263147]/70 text-[0.6875rem] max-w-[14rem] line-clamp-2 leading-relaxed">
           {description}
         </p>
       </div>
@@ -113,7 +113,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="block p-2 rounded-sm text-[#263147] hover:bg-[#263147]/5 hover:text-[#b3855a] transition-colors font-sans text-[11px] tracking-wide"
+      className="block p-2 rounded-sm text-[#263147] hover:bg-[#263147]/5 hover:text-[#b3855a] transition-colors font-sans text-[0.6875rem] tracking-wide"
     >
       {children}
     </Link>

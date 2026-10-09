@@ -71,12 +71,12 @@ const Team = () => {
           transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-xl mx-auto flex flex-col items-center justify-center text-center gap-4"
         >
-          <span className="mb-2 md:mb-6 flex items-center justify-center gap-4 text-[10px] font-sans font-semibold tracking-[0.3em] text-navy uppercase">
+          <span className="mb-2 md:mb-6 flex items-center justify-center gap-4 text-[0.625rem] font-sans font-semibold tracking-[0.3em] text-navy uppercase">
             <span className="w-8 h-[1px] bg-navy/40"></span>
             Başarılarla Dolu Bir Tarih
             <span className="w-8 h-[1px] bg-navy/40"></span>
           </span>
-          <h2 className="text-[28px] leading-tight md:text-5xl font-serif text-navy">
+          <h2 className="text-[1.75rem] leading-tight md:text-5xl font-serif text-navy">
             40 yıllık birikim, kusursuz vizyon ve
             <span className="text-red-600 italic font-light"> kanıtlanmış </span>
             başarılar.
@@ -105,8 +105,8 @@ const Team = () => {
                 </div>
 
                 <div>
-                  <p className="text-[13px] leading-snug md:text-base font-bold text-navy">{card.label}</p>
-                  <p className="text-[11px] leading-snug md:text-sm text-navy/50 mt-1">{card.sub}</p>
+                  <p className="text-[0.8125rem] leading-snug md:text-base font-bold text-navy">{card.label}</p>
+                  <p className="text-[0.6875rem] leading-snug md:text-sm text-navy/50 mt-1">{card.sub}</p>
                 </div>
               </div>
 

@@ -115,7 +115,7 @@ export default function Navbar({ className }: { className?: string }) {
           aria-label="Menüyü aç"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(true)}
-          className="flex items-center gap-2 px-3 py-2 rounded-sm border border-[#263147]/20 bg-[#FDFBF7]/80 backdrop-blur text-[#263147] text-[11px] font-sans uppercase tracking-[0.2em]"
+          className="flex items-center gap-2 px-3 py-2 rounded-sm border border-[#263147]/20 bg-[#FDFBF7]/80 backdrop-blur text-[#263147] text-[0.6875rem] font-sans uppercase tracking-[0.2em]"
         >
           Menü
           <span className="flex flex-col gap-[4px]">
@@ -126,12 +126,12 @@ export default function Navbar({ className }: { className?: string }) {
         </button>
       </div>
 
-      <div className="hidden min-[860px]:flex items-center justify-between w-full px-8 lg:px-16">
+      <div className="hidden min-[860px]:flex items-center justify-between gap-4 w-full px-6 lg:px-8 xl:px-16">
         
-        {/* Left Logo Container */}
-        <div className="hidden lg:flex items-center w-[200px] shrink-0">
+        {/* Left Logo Container (flexible so the bar can never overflow) */}
+        <div className="hidden lg:flex flex-1 min-w-0 items-center">
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-                <img src="/media/2025/05/image-7.png" alt="Baykuş Akademi" className="h-12 w-auto object-contain" />
+                <img src="/media/2025/05/image-7.png" alt="Baykuş Akademi" className="h-10 xl:h-12 w-auto max-w-full object-contain" />
             </Link>
         </div>
 
@@ -158,7 +158,7 @@ export default function Navbar({ className }: { className?: string }) {
               <div className="grid grid-cols-2 gap-10 text-sm min-w-[550px] p-4 bg-[#FDFBF7]">
                 {/* Akademik Sınavlar */}
                 <div>
-                  <h4 className="text-[10px] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Akademik & Lise</h4>
+                  <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Akademik & Lise</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.sinavlar_akademik.map((item) => (
                       <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
@@ -167,7 +167,7 @@ export default function Navbar({ className }: { className?: string }) {
                 </div>
                 {/* Dil Sınavları */}
                 <div>
-                  <h4 className="text-[10px] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Uluslararası Dil</h4>
+                  <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Uluslararası Dil</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.sinavlar_dil.map((item) => (
                       <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
@@ -181,7 +181,7 @@ export default function Navbar({ className }: { className?: string }) {
               <div className="grid grid-cols-2 gap-10 text-sm min-w-[500px] p-4 bg-[#FDFBF7]">
                 {/* Fransızca Müfredat */}
                 <div>
-                  <h4 className="text-[10px] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Fransızca Müfredat</h4>
+                  <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">Fransızca Müfredat</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.branslar_fr.map((item) => (
                       <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
@@ -190,7 +190,7 @@ export default function Navbar({ className }: { className?: string }) {
                 </div>
                 {/* İngilizce Müfredat */}
                 <div>
-                  <h4 className="text-[10px] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">İngilizce Müfredat</h4>
+                  <h4 className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-4 border-b border-[#263147]/10 pb-2">İngilizce Müfredat</h4>
                   <div className="flex flex-col space-y-3">
                     {MENU_DATA.branslar_en.map((item) => (
                       <HoveredLink key={item.id} href={`/dersler/${item.id}`}>{item.title}</HoveredLink>
@@ -215,9 +215,9 @@ export default function Navbar({ className }: { className?: string }) {
           </Menu>
         </div>
 
-        {/* Right Action Button */}
-        <div className="hidden lg:flex justify-end w-[200px] shrink-0">
-          <Link href="/iletisim" className="px-6 py-2 bg-[#263147] text-white text-[11px] font-sans uppercase tracking-[0.15em] hover:bg-[#b3855a] transition-colors duration-300">
+        {/* Right Action Button (column stays as a spacer at lg to keep the menu centered) */}
+        <div className="hidden lg:flex flex-1 min-w-0 justify-end">
+          <Link href="/iletisim" className="hidden xl:inline-flex whitespace-nowrap px-6 py-2 bg-[#263147] text-white text-[0.6875rem] font-sans uppercase tracking-[0.15em] hover:bg-[#b3855a] transition-colors duration-300">
             BİZE ULAŞIN
           </Link>
         </div>
@@ -285,7 +285,7 @@ export default function Navbar({ className }: { className?: string }) {
                           {section.groups.map((group, gi) => (
                             <div key={gi}>
                               {group.label && (
-                                <p className="text-[10px] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-2">{group.label}</p>
+                                <p className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-2">{group.label}</p>
                               )}
                               <div className="flex flex-col">
                                 {group.items.map((item) => (
@@ -293,7 +293,7 @@ export default function Navbar({ className }: { className?: string }) {
                                     key={item.id}
                                     href={`/dersler/${item.id}`}
                                     onClick={() => setMobileOpen(false)}
-                                    className="py-2 text-[15px] font-sans text-[#263147]/80 hover:text-[#b3855a]"
+                                    className="py-2 text-[0.9375rem] font-sans text-[#263147]/80 hover:text-[#b3855a]"
                                   >
                                     {item.title}
                                   </Link>
@@ -313,7 +313,7 @@ export default function Navbar({ className }: { className?: string }) {
           </nav>
 
           <div className="px-6 pb-8 pt-4">
-            <Link href="/iletisim" onClick={() => setMobileOpen(false)} className="block w-full text-center px-6 py-3 bg-[#263147] text-white text-[12px] font-sans uppercase tracking-[0.15em]">
+            <Link href="/iletisim" onClick={() => setMobileOpen(false)} className="block w-full text-center px-6 py-3 bg-[#263147] text-white text-[0.75rem] font-sans uppercase tracking-[0.15em]">
               Bize Ulaşın
             </Link>
           </div>

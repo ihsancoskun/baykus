@@ -12,7 +12,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         {/* Badge */}
-        <div className="inline-flex items-center justify-center gap-4 text-[10px] font-sans font-semibold tracking-[0.3em] text-gold uppercase mb-8 animate-fade-in-up">
+        <div className="inline-flex items-center justify-center gap-4 text-[0.625rem] font-sans font-semibold tracking-[0.3em] text-gold uppercase mb-8 animate-fade-in-up">
           <span className="w-8 h-[1px] bg-gold/40"></span>
           40 Yıllık Fransız Ekolü Mükemmeliyeti
           <span className="w-8 h-[1px] bg-gold/40"></span>

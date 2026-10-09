@@ -47,7 +47,7 @@ export default function WhatsAppButton() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.2, delay: 0.1 }}
-                className="absolute left-[64px] whitespace-nowrap font-medium text-[15px] tracking-wide font-sans"
+                className="absolute left-[64px] whitespace-nowrap font-medium text-[0.9375rem] tracking-wide font-sans"
               >
                 Eğitim Danışmanına Ulaşın
               </motion.span>
