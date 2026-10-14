@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LiquidMetalButton } from "@/components/ui/liquid-metal-button";
 import { AnimatedPageHero } from "@/components/ui/animated-page-hero";
@@ -72,7 +73,14 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 {cleanTitle} eğitimimiz hakkında detaylı bilgi almak ve ücretsiz seviye tespit sınavımıza katılmak için bizimle iletişime geçin.
               </p>
               
-              <LiquidMetalButton label="Hemen Başvur" href={waLink} target="_blank" />
+              <Link 
+                href="/yurtdisi-egitim-danismanligi-formu"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 mb-3 bg-red-600 hover:bg-red-700 text-white font-sans text-xs uppercase tracking-wider font-semibold rounded-full shadow-md transition"
+              >
+                Online Başvuru Formu
+              </Link>
+              
+              <LiquidMetalButton label="WhatsApp'tan Yazın" href={waLink} target="_blank" />
               
               <div className="mt-8 pt-8 border-t border-gray-100 w-full">
                 <p className="text-sm text-gray-500 mb-2">Sorularınız mı var?</p>

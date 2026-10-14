@@ -13,13 +13,22 @@ const MENU_DATA = {
       id: "fransiz-universiteler-basvuru-danismanligi", 
       title: "Fransa'daki Üniversitelere Başvuru Danışmanlığı",
       desc: "Fransa'daki elit üniversitelere kayıt ve başvuru süreçleri yönetimi.",
-      image: "/media/2025/06/fransizca-dersi-baykus.jpg"
+      image: "/media/2025/06/fransizca-dersi-baykus.jpg",
+      href: "/dersler/fransiz-universiteler-basvuru-danismanligi"
     },
     { 
       id: "yurtdisi-universiteler-basvuru-danismanligi", 
       title: "Genel Yurtdışı Danışmanlık",
       desc: "Dünyanın en iyi üniversitelerine giden yolu birlikte planlayalım.",
-      image: "/media/2025/06/biyoloji-baykus.jpg"
+      image: "/media/2025/06/biyoloji-baykus.jpg",
+      href: "/dersler/yurtdisi-universiteler-basvuru-danismanligi"
+    },
+    { 
+      id: "yurtdisi-egitim-danismanligi-formu", 
+      title: "Ön Değerlendirme & Başvuru Formu",
+      desc: "Üniversite ve lise kabulleri için online başvuru formunu doldurun.",
+      image: "/programs/universite-danismanligi.jpg",
+      href: "/yurtdisi-egitim-danismanligi-formu"
     }
   ],
   // Revize 09.10.2026 s.7 — "Hazırlık Atlama" ve "Pasaj" sınavlarının henüz ayrı sayfası yok;
@@ -151,7 +160,7 @@ export default function Navbar({ className }: { className?: string }) {
                   <ProductItem
                     key={item.title}
                     title={item.title}
-                    href={`/dersler/${item.id}`}
+                    href={item.href || `/dersler/${item.id}`}
                     src={item.image}
                     description={item.desc}
                   />
@@ -220,9 +229,12 @@ export default function Navbar({ className }: { className?: string }) {
           </Menu>
         </div>
 
-        {/* Right Action Button (column stays as a spacer at lg to keep the menu centered) */}
-        <div className="hidden lg:flex flex-1 min-w-0 justify-end">
-          <Link href="/iletisim" className="hidden xl:inline-flex whitespace-nowrap px-6 py-2 bg-[#263147] text-white text-[0.6875rem] font-sans uppercase tracking-[0.15em] hover:bg-[#b3855a] transition-colors duration-300">
+        {/* Right Action Button */}
+        <div className="hidden lg:flex flex-1 min-w-0 justify-end items-center gap-3">
+          <Link href="/yurtdisi-egitim-danismanligi-formu" className="hidden xl:inline-flex whitespace-nowrap px-4 py-2 bg-red-600 text-white text-[0.6875rem] font-sans font-medium uppercase tracking-[0.15em] hover:bg-red-700 transition-colors duration-300 rounded-sm shadow-sm">
+            BAŞVURU FORMU
+          </Link>
+          <Link href="/iletisim" className="hidden xl:inline-flex whitespace-nowrap px-5 py-2 bg-[#263147] text-white text-[0.6875rem] font-sans uppercase tracking-[0.15em] hover:bg-[#b3855a] transition-colors duration-300 rounded-sm">
             BİZE ULAŞIN
           </Link>
         </div>
@@ -293,12 +305,12 @@ export default function Navbar({ className }: { className?: string }) {
                                 <p className="text-[0.625rem] font-serif text-[#b3855a] uppercase tracking-[0.2em] mb-2">{group.label}</p>
                               )}
                               <div className="flex flex-col">
-                                {group.items.map((item) => (
+                                {group.items.map((item: any) => (
                                   <Link
                                     key={item.title}
-                                    href={`/dersler/${item.id}`}
+                                    href={item.href || `/dersler/${item.id}`}
                                     onClick={() => setMobileOpen(false)}
-                                    className="py-2 text-[0.9375rem] font-sans text-[#263147]/80 hover:text-[#b3855a]"
+                                    className="py-2 text-[0.9375rem] font-sans text-[#263147]/80 hover:text-red-600"
                                   >
                                     {item.title}
                                   </Link>
@@ -317,8 +329,11 @@ export default function Navbar({ className }: { className?: string }) {
             <Link href="/dersler/hakkimizda" onClick={() => setMobileOpen(false)} className="block py-4 border-b border-[#263147]/10 font-serif text-2xl text-[#263147]">Hakkımızda</Link>
           </nav>
 
-          <div className="px-6 pb-8 pt-4">
-            <Link href="/iletisim" onClick={() => setMobileOpen(false)} className="block w-full text-center px-6 py-3 bg-[#263147] text-white text-[0.75rem] font-sans uppercase tracking-[0.15em]">
+          <div className="px-6 pb-8 pt-4 space-y-2">
+            <Link href="/yurtdisi-egitim-danismanligi-formu" onClick={() => setMobileOpen(false)} className="block w-full text-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-[0.75rem] font-sans font-medium uppercase tracking-[0.15em] rounded-sm transition">
+              Online Başvuru Formu
+            </Link>
+            <Link href="/iletisim" onClick={() => setMobileOpen(false)} className="block w-full text-center px-6 py-3 bg-[#263147] text-white text-[0.75rem] font-sans uppercase tracking-[0.15em] rounded-sm">
               Bize Ulaşın
             </Link>
           </div>
