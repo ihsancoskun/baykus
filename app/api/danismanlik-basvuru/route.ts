@@ -43,6 +43,7 @@ export async function POST(request: Request) {
     const payload = {
       _subject: `🦉 Yeni Yurt Dışı Danışmanlık Başvurusu: ${adSoyad || "Yeni Aday"} [${referenceCode || "BYK-REF"}]`,
       _template: "table",
+      email: email || undefined,
       _replyto: email || undefined,
       _captcha: "false",
 
