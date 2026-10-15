@@ -46,6 +46,7 @@ export async function POST(request: Request) {
       email: email || undefined,
       _replyto: email || undefined,
       _captcha: "false",
+      _autoresponse: `Merhaba ${adSoyad || "Değerli Öğrencimiz / Velimiz"},\n\nBaykuş Akademi Yurt Dışı Eğitim Danışmanlığı ön başvuru formunuz başarıyla bize ulaşmıştır.\n\nBaşvuru Referans Kodunuz: ${referenceCode || "-"}\n\nEğitim danışmanlarımız formda paylaştığınız akademik bilgileri ve hedeflerinizi titizlikle inceledikten sonra, randevu ve süreç planlaması için sizinle en kısa sürede iletişime geçecektir.\n\nSaygılarımızla,\nBaykuş Akademi\nWeb: https://baykusakademi.com\nE-posta: baykusakademisi@gmail.com`,
 
       "--- ÖĞRENCİ BİLGİLERİ ---": "------------------------",
       "Başvuru Referans Kodu": referenceCode || "-",
