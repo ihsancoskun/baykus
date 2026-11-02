@@ -20,10 +20,10 @@ const IMG_WIDTH = 120;
 const IMG_HEIGHT = 160;
 
 const PROGRAMS = [
-    { title: "DELF & DALF HAZIRLIK", desc: "Uluslararası sertifikalara en doğru şekilde hazırlanmanız için özel kaynaklar.", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=400&q=80" },
-    { title: "FRANSIZ LİSELERİNE", desc: "Fransız liselerinin giriş sınavlarına özel programlarla dil becerilerinizi geliştiriyoruz.", img: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=400&q=80" },
-    { title: "GSÜ İÇ SINAV HAZIRLIK", desc: "Galatasaray Üniversitesi'nin kendi sınavına yönelik, tecrübeli kadromuzla hazırlık.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" },
-    { title: "ÜNİVERSİTE DANIŞMANLIĞI", desc: "Sadece sınav değil, tüm eğitim ve Fransa'ya başvuru sürecinde yanınızdayız.", img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80" }
+    { title: "DELF & DALF HAZIRLIK", desc: "Uluslararası sertifikalara en doğru şekilde hazırlanmanız için özel kaynaklar.", img: "/media/akademi/p9a0061.jpg" },
+    { title: "FRANSIZ LİSELERİNE", desc: "Fransız liselerinin giriş sınavlarına özel programlarla dil becerilerinizi geliştiriyoruz.", img: "/media/akademi/sta_8145.jpg" },
+    { title: "GSÜ İÇ SINAV HAZIRLIK", desc: "Galatasaray Üniversitesi'nin kendi sınavına yönelik, tecrübeli kadromuzla hazırlık.", img: "/media/akademi/p9a0509.jpg" },
+    { title: "ÜNİVERSİTE DANIŞMANLIĞI", desc: "Sadece sınav değil, tüm eğitim ve Fransa'ya başvuru sürecinde yanınızdayız.", img: "/media/akademi/p9a0352.jpg" }
 ];
 
 function FlipCard({

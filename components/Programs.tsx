@@ -5,19 +5,19 @@ import { CoverflowCarousel } from "@/components/ui/coverflow-carousel";
 
 const SLIDES = [
   {
-    src: "/programs/delf-dalf.jpg",
+    src: "/media/akademi/p9a0084.jpg",
     alt: "DELF & DALF Hazırlık",
     title: "DELF & DALF HAZIRLIK",
     subtitle: "Uluslararası sertifikalara eksiksiz hazırlanmanız için titizlikle kurgulanmış özel materyaller ve simülasyonlar.",
   },
   {
-    src: "/programs/fransiz-liseleri.jpg",
+    src: "/media/akademi/sta_8176.jpg",
     alt: "Fransız Liselerine Hazırlık",
     title: "FRANSIZ LİSELERİNE HAZIRLIK",
     subtitle: "Fransız ekolü liselerin giriş sınavları ve akademik müfredatlarına (IB, AP) yönelik ayrıcalıklı destek.",
   },
   {
-    src: "/programs/gsu-sinav.jpg",
+    src: "/media/akademi/p9a0521.jpg",
     alt: "GSÜ İç Sınav Hazırlık",
     title: "GSÜ İÇ SINAV HAZIRLIK",
     subtitle: "Galatasaray Üniversitesi'nin köklü iç sınavına (GSÜÖSYS), uzman kadromuz eşliğinde nokta atışı hazırlık.",

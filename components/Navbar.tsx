@@ -20,7 +20,7 @@ const MENU_DATA = {
       id: "yurtdisi-universiteler-basvuru-danismanligi", 
       title: "Genel Yurtdışı Danışmanlık",
       desc: "Dünyanın en iyi üniversitelerine giden yolu birlikte planlayalım.",
-      image: "/media/2025/06/biyoloji-baykus.jpg",
+      image: "/media/akademi/p9a0264.jpg",
       href: "/dersler/yurtdisi-universiteler-basvuru-danismanligi"
     },
     { 
