@@ -47,12 +47,12 @@ export default function AboutFounder() {
 
           {/* Right Column: Content */}
           <div>
-            <h2 className="text-xs md:text-sm font-bold text-red-600 uppercase tracking-[0.2em] mb-3 md:mb-4">
+            <span className="block text-sm font-bold text-red-600 uppercase tracking-[0.2em] mb-3 md:mb-4">
               KURUCUMUZ
-            </h2>
-            <h3 className="text-3xl md:text-5xl font-serif font-semibold text-navy mb-1 md:mb-2">
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif font-semibold text-navy mb-1 md:mb-2">
               Elif Akan
-            </h3>
+            </h2>
             <p className="text-sm md:text-lg font-medium text-navy/60 uppercase tracking-widest mb-5 md:mb-8">
               Eğitim Direktörü
             </p>

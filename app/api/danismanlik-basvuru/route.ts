@@ -14,7 +14,6 @@ export async function POST(request: Request) {
       referenceCode,
       adSoyad,
       dogumTarihi,
-      tcKimlikNo,
       email,
       telefon,
       veliAdSoyad,
@@ -107,10 +106,6 @@ export async function POST(request: Request) {
         <tr>
           <td style="padding: 8px 0; color: #64748b; border-bottom: 1px solid #f1f5f9;">Doğum Tarihi:</td>
           <td style="padding: 8px 0; color: #0f172a; border-bottom: 1px solid #f1f5f9;">${dogumTarihi || "-"}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; color: #64748b; border-bottom: 1px solid #f1f5f9;">T.C. Kimlik No:</td>
-          <td style="padding: 8px 0; color: #0f172a; border-bottom: 1px solid #f1f5f9;">${tcKimlikNo || "-"}</td>
         </tr>
         <tr>
           <td style="padding: 8px 0; color: #64748b; border-bottom: 1px solid #f1f5f9;">İkamet Şehri:</td>

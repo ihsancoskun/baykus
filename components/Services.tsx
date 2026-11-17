@@ -111,7 +111,7 @@ export default function Services() {
         transition={{ delay: 0.6 }}
         className="mt-12 md:mt-20 flex justify-center"
       >
-        <LiquidMetalButton label="Tüm Hizmetlerimizi İnceleyin" />
+        <LiquidMetalButton label="Tüm Hizmetlerimizi İnceleyin" href="/hizmetlerimiz" />
       </motion.div>
     </section>
   );

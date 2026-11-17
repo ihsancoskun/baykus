@@ -48,6 +48,7 @@ export const TextHoverEffect = ({
       height="100%"
       viewBox="0 0 300 120"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
@@ -172,20 +173,23 @@ export default function Footer() {
       title: "Kurumsal",
       links: [
         { label: "Hakkımızda", href: "/dersler/hakkimizda" },
-        { label: "Hizmetlerimiz", href: "/" },
-        { label: "Kariyer", href: "/iletisim" },
+        { label: "Hizmetlerimiz", href: "/hizmetlerimiz" },
+        { label: "Baykuş Kids", href: "/baykus-kids" },
+        { label: "Başvuru Formu", href: "/yurtdisi-egitim-danismanligi-formu" },
         { label: "İletişim", href: "/iletisim" },
+        { label: "KVKK Aydınlatma Metni", href: "/kvkk" },
+        { label: "Gizlilik Politikası", href: "/gizlilik" },
+        { label: "Çerez Politikası", href: "/cerez-politikasi" },
       ],
     },
     {
-      title: "Fransızca",
+      title: "Fransızca & Danışmanlık",
       links: [
         { label: "Fransa'daki Üniversitelere Başvuru", href: "/dersler/fransiz-universiteler-basvuru-danismanligi" },
+        { label: "Yurt Dışı Üniversite Danışmanlığı", href: "/dersler/yurtdisi-universiteler-basvuru-danismanligi" },
         { label: "Frankofon Okulların Tüm Branşları", href: "/dersler/fransizca-matematik-dersleri" },
+        { label: "Fransızca Edebiyat Dersleri", href: "/dersler/fransizca-edebiyat-dersleri" },
         { label: "Galatasaray Üniversitesi İç Sınavı", href: "/dersler/gsicsinavlar" },
-        { label: "Atölyelerle Fransızca", href: "/iletisim" },
-        { label: "Oyunlarla Fransızca", href: "/iletisim" },
-        { label: "Mesleki Fransızca", href: "/iletisim" },
       ],
     },
     {
@@ -208,8 +212,9 @@ export default function Footer() {
         { label: "FRANSIZ LİSELERİ İÇ SINAVI", href: "/dersler/fransiz-liselerine-hazirlik" },
         { label: "GSÜ İÇ SINAVI", href: "/dersler/gsicsinavlar" },
         { label: "SAT FRENCH", href: "/dersler/satfrench" },
-        { label: "TOEFL, SAT", href: "/dersler/toefl" },
+        { label: "TOEFL iBT", href: "/dersler/toefl" },
         { label: "CHECK POINT", href: "/dersler/cambridge" },
+        { label: "YDS HAZIRLIK", href: "/dersler/yds-hazirlik" },
       ],
     }
   ];
@@ -234,11 +239,7 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: <Facebook size={20} />, label: "Facebook", href: "#" },
-    { icon: <Instagram size={20} />, label: "Instagram", href: "#" },
-    { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.34 2.88 2.88 0 0 1 2.9-3.22c.16 0 .32.02.48.06V10.4a6.33 6.33 0 0 0-5.88 3.28 6.56 6.56 0 0 0 3 8.73 6.99 6.99 0 0 0 8.72-3 6.43 6.43 0 0 0 .68-2.91V8.69a8.36 8.36 0 0 0 6.16 2.76V8.04a5.44 5.44 0 0 1-3.64-1.35z"/></svg>, label: "TikTok", href: "#" },
-    { icon: <Linkedin size={20} />, label: "LinkedIn", href: "#" },
-    { icon: <Youtube size={20} />, label: "YouTube", href: "https://www.youtube.com/@baykusakademinisantasi" },
+    { icon: <Youtube size={20} />, label: "YouTube Kanalımız", href: "https://www.youtube.com/@baykusakademinisantasi" },
   ];
 
   return (
@@ -342,7 +343,7 @@ export default function Footer() {
       </div>
 
       {/* Text hover effect (Hidden on mobile, large on desktop) */}
-      <div className="lg:flex hidden h-[22rem] -mt-28 -mb-20 pointer-events-auto z-10 relative">
+      <div aria-hidden="true" className="lg:flex hidden h-[22rem] -mt-28 -mb-20 pointer-events-auto z-10 relative">
         <TextHoverEffect text="BAYKUŞ" className="z-10" />
       </div>
 

@@ -20,10 +20,45 @@ const IMG_WIDTH = 120;
 const IMG_HEIGHT = 160;
 
 const PROGRAMS = [
-    { title: "DELF & DALF HAZIRLIK", desc: "Uluslararası sertifikalara en doğru şekilde hazırlanmanız için özel kaynaklar.", img: "/media/akademi/p9a0061.jpg" },
-    { title: "FRANSIZ LİSELERİNE", desc: "Fransız liselerinin giriş sınavlarına özel programlarla dil becerilerinizi geliştiriyoruz.", img: "/media/akademi/sta_8145.jpg" },
-    { title: "GSÜ İÇ SINAV HAZIRLIK", desc: "Galatasaray Üniversitesi'nin kendi sınavına yönelik, tecrübeli kadromuzla hazırlık.", img: "/media/akademi/p9a0509.jpg" },
-    { title: "ÜNİVERSİTE DANIŞMANLIĞI", desc: "Sadece sınav değil, tüm eğitim ve Fransa'ya başvuru sürecinde yanınızdayız.", img: "/media/akademi/p9a0352.jpg" }
+    { title: "DELF & DALF HAZIRLIK", desc: "Uluslararası sertifikalara en doğru şekilde hazırlanmanız için özel kaynaklar.", img: "/media/akademi/p9a0061.jpg", href: "/dersler/delf-dalf" },
+    { title: "FRANSIZ LİSELERİNE", desc: "Fransız liselerinin giriş sınavlarına özel programlarla dil becerilerinizi geliştiriyoruz.", img: "/media/akademi/sta_8145.jpg", href: "/dersler/fransiz-liselerine-hazirlik" },
+    { title: "GSÜ İÇ SINAV HAZIRLIK", desc: "Galatasaray Üniversitesi'nin kendi sınavına yönelik, tecrübeli kadromuzla hazırlık.", img: "/media/akademi/p9a0509.jpg", href: "/dersler/gsicsinavlar" },
+    { title: "ÜNİVERSİTE DANIŞMANLIĞI", desc: "Sadece sınav değil, tüm eğitim ve Fransa'ya başvuru sürecinde yanınızdayız.", img: "/media/akademi/p9a0352.jpg", href: "/dersler/fransiz-universiteler-basvuru-danismanligi" }
+];
+
+const HERO_CARD_ALTS = [
+  "Baykuş Akademi Almanca ve yabancı dil eğitimi",
+  "Baykuş Akademi Fransız kültürü ve baykuş figürü",
+  "Fransız liseleri akademik başarı programı",
+  "Baykuş Akademi birebir öğrenci mentorluğu",
+  "Cambridge Check Point sınav hazırlık programı",
+  "Baykuş Akademi etüt ve ders çalışma ortamı",
+  "Galatasaray Üniversitesi İç Sınav hazırlık programı",
+  "Baykuş Akademi tahtada DELF B2 ders anlatımı",
+  "Paris üniversite ve eğitim danışmanlığı",
+  "Baykuş Akademi Fransızca kütüphanesinde kitap okuyan öğrenciler",
+  "İspanyolca ve dünya dilleri eğitimi",
+  "Baykuş Akademi çocuk ve gençlik Fransızca kütüphanesi",
+  "Baykuş Akademi Kurucusu Elif Akan",
+  "Baykuş Akademi birebir Fransızca özel ders",
+  "Baykuş Akademi eğitim vizyonu",
+  "Baykuş Akademi analitik branş ve sınav dersi",
+  "Fransa yükseköğretim ve Campus France danışmanlığı",
+  "Baykuş Akademi veli ve öğrenci danışmanlık toplantısı",
+  "Fransızca dil ve edebiyat atölyesi",
+  "Baykuş Akademi eğitim kadrosu ve grup dersi",
+  "Fransa üniversiteleri kabul süreci",
+  "Baykuş Akademi eğitmen ve öğrenci çalışması",
+  "Pierre Loti Fransız Lisesi Baccalauréat hazırlık",
+  "Baykuş Akademi sınıf içi gramer ve yazım dersi",
+  "Saint-Benoît Fransız Lisesi müfredat desteği",
+  "Baykuş Akademi zengin Fransızca kitaplık koleksiyonu",
+  "Saint-Michel Fransız Lisesi sınav hazırlık",
+  "Baykuş Akademi Le Robert Fransızca sözlük kitaplığı",
+  "Baykuş Akademi kütüphane önünde öğrenci danışmanlığı",
+  "Baykuş Akademi Fransızca ders materyalleri",
+  "Baykuş Akademi yazılı sınav hazırlık çalışması",
+  "Baykuş Akademi grup etüt çalışması"
 ];
 
 function FlipCard({
@@ -74,7 +109,7 @@ function FlipCard({
                     <div className="relative w-full h-full bg-gray-200 overflow-hidden rounded-sm">
                         <img
                             src={src}
-                            alt={`hero-${index}`}
+                            alt={HERO_CARD_ALTS[index % HERO_CARD_ALTS.length]}
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-transparent" />
@@ -88,16 +123,14 @@ function FlipCard({
                 >
                     {index < 4 ? (
                         <>
-                            <img src={PROGRAMS[index].img} alt="bg" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
+                            <img src={PROGRAMS[index].img} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
                             <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/90 to-navy/10" />
                             <div className="absolute inset-0 flex flex-col items-center justify-end p-1.5 pb-2 text-center">
                                 <h3 className="text-[0.625rem] font-serif font-bold text-white mb-1 leading-tight">{PROGRAMS[index].title}</h3>
                                 <div className="w-6 h-[1px] bg-red-600/50 mb-2 rounded-full" />
                                 <p className="text-[0.5rem] font-sans font-light text-gray-300 leading-snug mb-2 px-1 line-clamp-3">{PROGRAMS[index].desc}</p>
                                 <div className="mt-2 flex items-center justify-center w-full px-2">
-                                    <span className="inline-block w-full text-center bg-navy border border-white/50 text-white text-[0.5rem] py-1 rounded hover:bg-red-600 transition-colors">
-                                        İncele
-                                    </span>
+                                    <Link href={PROGRAMS[index].href} className="pointer-events-auto inline-block w-full text-center bg-navy border border-white/50 text-white text-[0.625rem] py-1.5 rounded hover:bg-red-600 transition-colors">İncele</Link>
                                 </div>
                             </div>
                         </>
@@ -313,7 +346,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
 
                 {/* Top-Left Slogan Block */}
                 <motion.div 
-                    initial={{ opacity: 0, y: -60 }}
+                    initial={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 100 }}
                     className="order-1 lg:order-none lg:col-start-1 lg:row-start-1 lg:self-start lg:pt-[clamp(6.5rem,16svh,10rem)] relative z-30 shrink-0 w-full lg:max-w-[26rem] pointer-events-auto text-left"
@@ -322,11 +355,11 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                         Fransız Ekolünde <br/>
                         <span className="text-red-600 italic font-light">40 Yıllık</span> Deneyim.
                     </h1>
-                    <p className="mt-2 md:mt-4 text-[0.75rem] sm:text-sm xl:text-base text-navy-100 leading-snug md:leading-relaxed font-sans font-light">
+                    <p className="mt-2 md:mt-4 text-sm xl:text-base text-navy-100 leading-snug md:leading-relaxed font-sans font-light">
                         Öğrencilerimizi sadece sınavlara değil, elit bir geleceğe hazırlıyoruz. DELF/DALF ve yurtdışı danışmanlık hizmetlerimizle ayrıcalıklı bir eğitim ekosistemi.
                     </p>
                     <div className="mt-3 md:mt-6">
-                        <Link href="/iletisim" className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 rounded-sm border border-navy text-white font-medium bg-navy hover:bg-red-600 hover:border-red-600 transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
+                        <Link href="/iletisim" className="inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 md:px-6 md:py-3 rounded-sm border border-navy text-white font-medium bg-navy hover:bg-red-600 hover:border-red-600 transition-colors duration-300 shadow-sm group text-sm tracking-wide">
                             Baykuş Akademi'yi Keşfet
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>
@@ -335,7 +368,7 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
 
                 {/* Bottom-Right Secondary Slogan (bottom padding keeps it clear of the floating WhatsApp button) */}
                 <motion.div 
-                    initial={{ opacity: 0, y: 60 }}
+                    initial={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1, type: "spring", stiffness: 100 }}
                     className="order-3 lg:order-none lg:col-start-3 lg:row-start-1 lg:self-end lg:justify-self-end lg:pb-[clamp(7.5rem,15svh,9rem)] relative z-30 shrink-0 w-full lg:max-w-[26rem] pointer-events-auto flex flex-col items-end text-right"
@@ -344,11 +377,11 @@ const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * 
                         Geleceğe Açılan <br/> 
                         <span className="text-red-600 italic font-light">Zarif Bir Kapı.</span>
                     </h2>
-                    <p className="mt-1.5 md:mt-4 text-[0.75rem] md:text-sm xl:text-base text-navy/80 leading-snug md:leading-relaxed font-sans font-light text-right">
+                    <p className="mt-1.5 md:mt-4 text-sm xl:text-base text-navy/80 leading-snug md:leading-relaxed font-sans font-light text-right">
                         Hedefiniz neresi olursa olsun, Avrupa'nın en seçkin üniversitelerine giden bu prestijli yolda Baykuş Akademi hep yanınızda.
                     </p>
                     <div className="shrink-0 mt-2.5 mr-14 lg:mr-0 md:mt-6">
-                        <Link href="/dersler/fransiz-universiteler-basvuru-danismanligi" className="inline-flex items-center justify-center whitespace-nowrap px-3 py-2 md:px-6 md:py-3 bg-white/70 lg:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-xs md:text-sm tracking-wide">
+                        <Link href="/dersler/fransiz-universiteler-basvuru-danismanligi" className="inline-flex items-center justify-center whitespace-nowrap min-h-[44px] px-4 py-2.5 md:px-6 md:py-3 bg-white/80 lg:bg-transparent rounded-sm text-navy font-medium border border-navy/30 hover:border-navy hover:text-white hover:bg-navy transition-colors duration-300 shadow-sm group text-sm tracking-wide">
                             Danışmanlığı İncele
                             <svg className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </Link>

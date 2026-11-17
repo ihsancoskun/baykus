@@ -81,11 +81,11 @@ export default function SkewCards() {
               </div>
 
               <div className="flex flex-col flex-grow justify-center">
-                <h2 className="text-xl font-bold mb-3 font-serif leading-tight">{title}</h2>
+                <h3 className="text-xl font-bold mb-3 font-serif leading-tight">{title}</h3>
                 <p className="text-sm leading-relaxed mb-4 font-light text-white/90 line-clamp-3">{desc}</p>
                 <a
-                  href="/iletisim"
-                  className="inline-block text-xs font-bold text-navy bg-white px-4 py-2.5 rounded-full hover:bg-[#ffcf4d] hover:shadow-md transition-colors w-fit mt-auto"
+                  href="/baykus-kids"
+                  className="min-h-[44px] inline-flex items-center justify-center text-sm font-bold text-navy bg-white px-5 py-2.5 rounded-full hover:bg-[#ffcf4d] hover:shadow-md transition-colors w-fit mt-auto"
                 >
                   Daha Fazla Bilgi
                 </a>

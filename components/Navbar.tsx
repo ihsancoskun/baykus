@@ -42,7 +42,6 @@ const MENU_DATA = {
     { id: "fransiz-liselerine-hazirlik", title: "Fransız Liselerine Doğrudan Geçiş İç Sınavı" },
     { id: "fransiz-liselerine-hazirlik", title: "Fransız Liseleri Pasaj Sınavı" },
     { id: "yds-hazirlik", title: "YDS" },
-    { id: "kpds-hazirlik", title: "KPDS" },
   ],
   sinavlar_dil: [
     { id: "delf-dalf", title: "DELF / DALF" },

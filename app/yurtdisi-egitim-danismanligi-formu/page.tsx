@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { trackEvent } from "@/lib/analytics";
 import { 
   User, 
   GraduationCap, 
@@ -29,7 +31,6 @@ export default function YurtdisiDanismanlikFormuPage() {
     // Adım 1: Kişisel & İletişim
     adSoyad: "",
     dogumTarihi: "",
-    tcKimlikNo: "",
     email: "",
     telefon: "",
     veliAdSoyad: "",
@@ -121,6 +122,7 @@ export default function YurtdisiDanismanlikFormuPage() {
       if (!res.ok || !result.success) {
         console.warn("E-posta gönderim bildirimi:", result.error);
       }
+      trackEvent("form_submit", { form_name: "yurtdisi_danismanlik" });
     } catch (err) {
       console.error("Gönderim hatası:", err);
     } finally {
@@ -352,22 +354,6 @@ export default function YurtdisiDanismanlikFormuPage() {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-xs font-semibold uppercase tracking-wider text-navy">
-                          T.C. Kimlik Numarası
-                        </label>
-                        <input
-                          type="text"
-                          name="tcKimlikNo"
-                          maxLength={11}
-                          value={formData.tcKimlikNo}
-                          onChange={handleChange}
-                          placeholder="Örn: 11 Haneli TC Kimlik No"
-                          className="w-full px-4 py-3 bg-[#FDFBF7] border border-gray-200 rounded-xl focus:outline-none focus:border-red-600 focus:bg-white text-navy font-sans text-sm transition"
-                        />
-                        <span className="text-[11px] text-gray-400">Yalnızca resmi kayıt dosyası oluşturulurken kullanılır.</span>
-                      </div>
-
                       <div className="space-y-2">
                         <label className="text-xs font-semibold uppercase tracking-wider text-navy">
                           İkamet Edilen Şehir
@@ -927,12 +913,21 @@ export default function YurtdisiDanismanlikFormuPage() {
                         <input
                           type="checkbox"
                           name="kvkkOnay"
+                          required
                           checked={formData.kvkkOnay}
                           onChange={handleChange}
-                          className="mt-1 w-4 h-4 rounded text-red-600 focus:ring-red-500 border-gray-300"
+                          className="mt-1 w-5 h-5 rounded text-red-600 focus:ring-red-500 border-gray-300"
                         />
-                        <span className="text-xs text-gray-600 leading-relaxed">
-                          Paylaştığım kişisel ve akademik bilgilerin, Baykuş Akademi eğitim danışmanlığı süreci kapsamında değerlendirilmesine ve tarafımla iletişime geçilmesine <strong>KVKK Aydınlatma Metni</strong> doğrultusunda onay veriyorum.
+                        <span className="text-sm text-gray-600 leading-relaxed">
+                          Paylaştığım kişisel ve akademik bilgilerin, Baykuş Akademi eğitim danışmanlığı süreci kapsamında değerlendirilmesine ve tarafımla iletişime geçilmesine{" "}
+                          <Link href="/kvkk" target="_blank" className="text-red-600 underline font-semibold">
+                            KVKK Aydınlatma Metni
+                          </Link>{" "}
+                          ve{" "}
+                          <Link href="/gizlilik" target="_blank" className="text-red-600 underline font-semibold">
+                            Gizlilik Politikası
+                          </Link>{" "}
+                          doğrultusunda onay veriyorum. <span className="text-red-600">*</span>
                         </span>
                       </label>
                     </div>
@@ -946,7 +941,7 @@ export default function YurtdisiDanismanlikFormuPage() {
                   <button
                     type="button"
                     onClick={handlePrev}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold transition"
+                    className="min-h-[44px] inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-semibold transition"
                   >
                     <ArrowLeft className="w-4 h-4" />
                     Önceki Adım
@@ -958,7 +953,7 @@ export default function YurtdisiDanismanlikFormuPage() {
                 {currentStep < totalSteps ? (
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-navy hover:bg-navy-100 text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition group"
+                    className="min-h-[44px] inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-navy hover:bg-navy-100 text-white text-sm font-semibold shadow-sm hover:shadow-md transition group"
                   >
                     Sonraki Adım
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -966,9 +961,9 @@ export default function YurtdisiDanismanlikFormuPage() {
                 ) : (
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className={`inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition ${
-                      isSubmitting ? "opacity-75 cursor-not-allowed" : ""
+                    disabled={isSubmitting || !formData.kvkkOnay}
+                    className={`min-h-[44px] inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-semibold shadow-md hover:shadow-lg transition ${
+                      isSubmitting || !formData.kvkkOnay ? "opacity-50 cursor-not-allowed" : ""
                     }`}
                   >
                     {isSubmitting ? (

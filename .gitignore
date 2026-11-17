@@ -36,3 +36,5 @@ yarn-error.log*
 # raw photo archive
 /pic
 tsconfig.tsbuildinfo
+*.pdf
+fix_content.js

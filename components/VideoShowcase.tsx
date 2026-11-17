@@ -23,17 +23,17 @@ export default function VideoShowcase() {
 
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="text-center mb-8 md:mb-20">
-          <motion.h2 
+          <motion.span 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 flex items-center justify-center gap-4 text-[0.625rem] font-sans font-semibold tracking-[0.3em] text-white/50 uppercase"
+            className="mb-6 flex items-center justify-center gap-4 text-xs font-sans font-semibold tracking-[0.3em] text-white/50 uppercase"
           >
             <span className="w-8 h-[1px] bg-white/20"></span>
             İLHAM VEREN YOLCULUKLAR
             <span className="w-8 h-[1px] bg-white/20"></span>
-          </motion.h2>
-          <motion.h3 
+          </motion.span>
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -41,7 +41,7 @@ export default function VideoShowcase() {
             className="text-3xl md:text-5xl lg:text-6xl font-serif font-medium text-white mb-4 md:mb-6"
           >
             Öğrencilerimizin Başarı Hikayeleri
-          </motion.h3>
+          </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
